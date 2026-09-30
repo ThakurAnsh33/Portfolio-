@@ -7,8 +7,12 @@ const getApiBaseUrl = () => {
   if (import.meta.env.VITE_API_URL) {
     return import.meta.env.VITE_API_URL.replace(/\/$/, '');
   }
-  // In production or when served by Express, relative path works automatically
-  if (typeof window !== 'undefined' && window.location.port === '5000') {
+  // In production (Render, custom domain, or any remote host), use relative URL
+  if (
+    typeof window !== 'undefined' &&
+    !window.location.hostname.includes('localhost') &&
+    !window.location.hostname.includes('127.0.0.1')
+  ) {
     return '';
   }
   return 'http://localhost:5000';
@@ -61,31 +65,18 @@ export const recordVisit = async () => {
         'Content-Type': 'application/json',
       },
     });
+    if (!response.ok) return { totalVisits: 0 };
     const data = await response.json();
-    return data.count || 1240;
-  } catch (error) {
-    return 1240;
+    return data;
+  } catch (err) {
+    return { totalVisits: 0 };
   }
 };
 
 /**
- * Get current visitor count without incrementing
- */
-export const getVisitCount = async () => {
-  const baseUrl = getApiBaseUrl();
-  try {
-    const response = await fetch(`${baseUrl}/api/visit`);
-    const data = await response.json();
-    return data.count || 1240;
-  } catch (error) {
-    return 1240;
-  }
-};
-
-/**
- * Get tracked resume download URL
+ * Direct download link for tracked resume PDF
  */
 export const getResumeDownloadUrl = () => {
   const baseUrl = getApiBaseUrl();
-  return `${baseUrl}/api/resume-download`;
+  return `${baseUrl}/resume.pdf`;
 };
