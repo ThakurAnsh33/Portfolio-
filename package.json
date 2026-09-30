@@ -1,0 +1,31 @@
+{
+  "name": "ansh-singh-mern-portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Production-ready MERN Stack developer portfolio for Ansh Singh",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix client install && npm --prefix server install",
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run dev",
+    "dev": "concurrently -n \"CLIENT,SERVER\" -c \"cyan,magenta\" \"npm run client\" \"npm run server\"",
+    "build": "npm --prefix client install && npm --prefix server install && npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "test:email": "npm --prefix server run test:email"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "mern",
+    "portfolio",
+    "react",
+    "node",
+    "express",
+    "mongodb",
+    "tailwind",
+    "framer-motion"
+  ],
+  "author": "Ansh Singh <anshmvm@gmail.com>",
+  "license": "MIT"
+}

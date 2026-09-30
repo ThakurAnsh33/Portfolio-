@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: ansh-singh-portfolio
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_URL
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: NOTIFICATION_RECEIVER
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM
+        value: Ansh Portfolio <onboarding@resend.dev>
+      - key: ADMIN_SECRET
+        generateValue: true

@@ -1,0 +1,94 @@
+import fs from 'fs';
+import path from 'path';
+
+// Generate a valid minimal PDF with Ansh Singh's resume content
+const pdfContent = `%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 850 >>
+stream
+BT
+/F1 18 Tf
+50 740 Td
+(Ansh Singh - Full Stack MERN Developer) Tj
+/F1 10 Tf
+0 -18 Td
+(Email: anshmvm@gmail.com | Phone: +91 9559035733 | Location: Phagwara, Punjab, India) Tj
+0 -14 Td
+(LinkedIn: https://www.linkedin.com/in/thakuransh/ | GitHub: https://github.com/ThakurAnsh33) Tj
+0 -24 Td
+/F1 14 Tf
+(EDUCATION) Tj
+/F1 10 Tf
+0 -16 Td
+(Lovely Professional University - B.Tech CSE (CGPA: 8.3) [2024 - Present]) Tj
+0 -14 Td
+(Maharishi Vidya Mandir, Orai - Intermediate PCM (93%) [2023 - 2024]) Tj
+0 -14 Td
+(Maharishi Patanjali Vidya Mandir, Prayagraj - High School (90%) [2021 - 2022]) Tj
+0 -24 Td
+/F1 14 Tf
+(SKILLS) Tj
+/F1 10 Tf
+0 -16 Td
+(Languages: Java, C++, C, JavaScript, Python) Tj
+0 -14 Td
+(Frontend: React.js, Tailwind CSS, HTML5, CSS3, Redux) Tj
+0 -14 Td
+(Backend: Node.js, Express.js, REST APIs, JWT Auth, Socket.IO) Tj
+0 -14 Td
+(Database: MongoDB, Mongoose ODM | Tools: Git, GitHub, VS Code, Cloudinary, Docker) Tj
+0 -24 Td
+/F1 14 Tf
+(EXPERIENCE) Tj
+/F1 10 Tf
+0 -16 Td
+(Info Bharat Interns - Web Development Intern (MERN Stack)) Tj
+0 -14 Td
+(- Built Service Marketplace with React, Node, Express, MongoDB) Tj
+0 -14 Td
+(- Implemented JWT authentication and role-based access control) Tj
+0 -24 Td
+/F1 14 Tf
+(FEATURED PROJECTS) Tj
+/F1 10 Tf
+0 -16 Td
+(1. PrimeBid - MERN Stack Real-Time Auction Platform) Tj
+0 -14 Td
+(2. CivicPulse - AI-Powered Citizen Feedback Analysis Dashboard) Tj
+0 -14 Td
+(3. Home Services Platform - 24-Hour Hackathon Finalist) Tj
+0 -14 Td
+(4. LPU Clothings - Responsive E-Commerce Platform) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000224 00000 n 
+0000000295 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1200
+%%EOF`;
+
+const targetPath = path.resolve('client/public/resume.pdf');
+fs.writeFileSync(targetPath, pdfContent, 'utf-8');
+console.log('Created resume.pdf at', targetPath);
+
