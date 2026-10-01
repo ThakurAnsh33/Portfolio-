@@ -54,7 +54,7 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
       className="h-full"
     >
       <TiltCard className={`group hud-card hud-card-interactive rounded-3xl overflow-hidden border flex flex-col justify-between h-full ${
-        isNerSlap ? 'border-emerald-500/40 shadow-lg shadow-emerald-500/5' : ''
+        isNerSlap ? 'border-accent-moss/40 shadow-lg shadow-accent-moss/5' : ''
       }`}>
       <div>
         {/* Visual Header Banner with Gradient */}
@@ -65,18 +65,18 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
 
           <div className="relative z-10 flex items-center justify-between">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-black/60 dark:bg-black/70 backdrop-blur-md text-white border border-white/20">
-              <Calendar size={12} className="text-accent-cyan" />
+              <Calendar size={12} className="text-accent-moss" />
               {project.date}
             </span>
 
             {isNerSlap ? (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-emerald-500 text-[#05060f] shadow-md">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-accent-amber text-[#12161A] shadow-md">
                 <Sparkles size={11} />
                 SIH 2026 Grand Finale Flagship
               </span>
             ) : (
               project.featured && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-accent-cyan text-[#05060f] shadow-sm">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-accent-amber text-[#12161A] shadow-sm">
                   <Sparkles size={10} />
                   Featured
                 </span>
@@ -85,13 +85,13 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
           </div>
 
           <div className="relative z-10">
-            <h4 className="text-xs uppercase font-mono tracking-wider text-slate-800 dark:text-accent-cyan font-bold mb-1">
+            <h4 className="text-xs uppercase font-mono tracking-wider text-slate-800 dark:text-accent-moss font-bold mb-1">
               {project.subtitle}
             </h4>
             <Link to={`/projects/${project.id}`}>
-              <h3 className={`${isHeroVariant ? 'text-xl sm:text-2xl lg:text-3xl' : 'text-xl'} font-extrabold font-heading text-slate-900 dark:text-[#f2f3f8] drop-shadow-sm hover:text-accent-cyan transition-colors flex items-center gap-1.5`}>
+              <h3 className={`${isHeroVariant ? 'text-xl sm:text-2xl lg:text-3xl' : 'text-xl'} font-extrabold font-heading text-slate-900 dark:text-[#EDEDE6] drop-shadow-sm hover:text-accent-moss transition-colors flex items-center gap-1.5`}>
                 <span>{project.title}</span>
-                <ArrowUpRight size={18} className="opacity-0 group-hover:opacity-100 transition-opacity text-accent-cyan shrink-0" />
+                <ArrowUpRight size={18} className="opacity-0 group-hover:opacity-100 transition-opacity text-accent-moss shrink-0" />
               </h3>
             </Link>
           </div>
@@ -105,7 +105,7 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
               <Link
                 key={tag}
                 to={`/projects?tech=${encodeURIComponent(tag.toLowerCase())}`}
-                className="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-slate-100 dark:bg-[#14172a] text-[#0b0d1a] dark:text-[#f2f3f8] border border-slate-200 dark:border-white/10 hover:border-accent-cyan/50 hover:text-accent-cyan transition-colors"
+                className="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-slate-100 dark:bg-[#222A30] text-[#14181C] dark:text-[#EDEDE6] border border-slate-200 dark:border-white/10 hover:border-accent-moss/50 hover:text-accent-moss transition-colors"
                 title={`Filter projects by ${tag}`}
               >
                 {tag}
@@ -114,18 +114,18 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
           </div>
 
           {/* Description */}
-          <p className="text-sm text-slate-700 dark:text-[#e6e6f0] leading-relaxed mb-4">
+          <p className="text-sm text-slate-700 dark:text-[#EDEDE6] leading-relaxed mb-4">
             {project.description}
           </p>
 
           {/* Key Highlights / Features Container */}
-          <div className="space-y-2 mb-4 bg-slate-100/90 dark:bg-[#14172a]/95 p-4 rounded-2xl border border-slate-200 dark:border-white/10">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-accent-cyan block mb-2">
+          <div className="space-y-2 mb-4 bg-slate-100/90 dark:bg-[#1B2127]/95 p-4 rounded-2xl border border-slate-200 dark:border-white/10">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-accent-moss block mb-2">
               Core Highlights:
             </span>
             {project.features.slice(0, 3).map((feat, fIdx) => (
-              <div key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#0b0d1a] dark:text-[#f2f3f8] leading-relaxed">
-                <CheckCircle2 size={15} className="text-emerald-500 shrink-0 mt-0.5" />
+              <div key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#14181C] dark:text-[#EDEDE6] leading-relaxed">
+                <CheckCircle2 size={15} className="text-accent-moss shrink-0 mt-0.5" />
                 <span>{feat}</span>
               </div>
             ))}
@@ -141,18 +141,18 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden mb-4"
               >
-                <div className="rounded-2xl border border-accent-cyan/30 dark:bg-[#05060f] bg-slate-100/90 p-4 text-xs font-mono text-slate-700 dark:text-slate-300">
-                  <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400">
-                    <span className="flex items-center gap-1.5 text-accent-cyan font-semibold">
+                <div className="rounded-2xl border border-accent-moss/30 dark:bg-[#12161A] bg-slate-100/90 p-4 text-xs font-mono text-slate-700 dark:text-content-muted">
+                  <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-200 dark:border-white/10 text-slate-500 dark:text-content-muted">
+                    <span className="flex items-center gap-1.5 text-accent-moss font-semibold">
                       <Laptop size={14} /> Interactive Preview Mockup
                     </span>
-                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Live Schema Ready
+                    <span className="text-[10px] text-accent-moss font-semibold flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent-moss animate-pulse" /> Live Schema Ready
                     </span>
                   </div>
                   {isRealDeployedUrl ? (
                     <div className="space-y-2">
-                      <p className="text-[11px] text-slate-600 dark:text-slate-400">
+                      <p className="text-[11px] text-slate-600 dark:text-content-muted">
                         Active deployment detected. Click below to launch external web service.
                       </p>
                       <a
@@ -167,9 +167,9 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
                     </div>
                   ) : (
                     <div className="space-y-2">
-                      <div className="p-3 rounded-xl dark:bg-[#0f1120] bg-white border border-slate-200 dark:border-white/5 space-y-1.5">
-                        <div className="text-accent-cyan font-bold text-xs">{project.title.split('—')[0]}</div>
-                        <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">
+                      <div className="p-3 rounded-xl dark:bg-[#1B2127] bg-white border border-slate-200 dark:border-white/5 space-y-1.5">
+                        <div className="text-accent-moss font-bold text-xs">{project.title.split('—')[0]}</div>
+                        <p className="text-[11px] text-slate-600 dark:text-content-muted leading-relaxed">
                           Full-stack architecture with REST API endpoints, real-time events, and database persistence.
                         </p>
                       </div>
@@ -202,7 +202,7 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
         <div className="w-full sm:w-auto flex items-center gap-2">
           <button
             onClick={() => setShowPreview(!showPreview)}
-            className="px-3 py-2.5 rounded-xl text-xs font-semibold hud-card text-slate-800 dark:text-[#f2f3f8] hover:text-accent-cyan border border-slate-200 dark:border-white/10 flex items-center justify-center gap-1.5 transition-colors"
+            className="px-3 py-2.5 rounded-xl text-xs font-semibold hud-card text-slate-800 dark:text-[#EDEDE6] hover:text-accent-moss border border-slate-200 dark:border-white/10 flex items-center justify-center gap-1.5 transition-colors"
             title="Toggle quick preview"
           >
             {showPreview ? <EyeOff size={14} /> : <Eye size={14} />}
@@ -213,7 +213,7 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
               href={project.liveDemoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-[#05060f] shadow-sm transition-all"
+              className="inline-flex items-center justify-center gap-1 px-3 py-2.5 rounded-xl text-xs font-bold bg-accent-moss hover:bg-accent-mossDeep text-[#12161A] shadow-sm transition-all"
               title="Launch Live Deployment"
             >
               <ExternalLink size={13} />
@@ -226,7 +226,7 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleGithubClick}
-            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hud-card text-[#0b0d1a] dark:text-[#f2f3f8] hover:text-accent-cyan dark:hover:text-accent-cyan border border-slate-200 dark:border-white/10"
+            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hud-card text-[#14181C] dark:text-[#EDEDE6] hover:text-accent-moss dark:hover:text-accent-moss border border-slate-200 dark:border-white/10"
             title={project.githubUrl.includes('<your') ? 'Configure your repo URL in portfolioData.js' : 'Inspect Repository'}
           >
             <Github size={14} />

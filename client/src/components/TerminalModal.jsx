@@ -413,14 +413,14 @@ Navigating to /contact for direct scheduling...
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.25 }}
-          className={`relative flex flex-col bg-[#05060f] text-[#f2f3f8] border border-accent-cyan/30 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 z-10 font-mono ${
+          className={`relative flex flex-col bg-[#12161A] text-[#EDEDE6] border border-accent-moss/40 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 z-10 font-mono ${
             isExpanded
               ? 'w-[96vw] h-[92vh]'
               : 'w-full max-w-3xl h-[650px] max-h-[88vh]'
           }`}
         >
           {/* Terminal Window Header Bar */}
-          <div className="flex items-center justify-between px-4 py-3 bg-[#0f1120] border-b border-white/10 select-none">
+          <div className="flex items-center justify-between px-4 py-3 bg-[#1B2127] border-b border-white/10 select-none">
             {/* Window Traffic Lights */}
             <div className="flex items-center gap-2">
               <button
@@ -430,21 +430,21 @@ Navigating to /contact for direct scheduling...
               />
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="w-3 h-3 rounded-full bg-amber-500 hover:opacity-80 transition-opacity"
+                className="w-3 h-3 rounded-full bg-accent-amber hover:opacity-80 transition-opacity"
                 title="Resize"
               />
               <button
                 onClick={() => handleCommand('clear')}
-                className="w-3 h-3 rounded-full bg-emerald-500 hover:opacity-80 transition-opacity"
+                className="w-3 h-3 rounded-full bg-accent-moss hover:opacity-80 transition-opacity"
                 title="Clear"
               />
-              <span className="ml-2 text-xs font-semibold text-slate-400 hidden sm:inline">
+              <span className="ml-2 text-xs font-semibold text-content-muted hidden sm:inline">
                 ansh@portfolio-shell:~
               </span>
             </div>
 
-            {/* Title / Badge */}
-            <div className="flex items-center gap-2 text-xs text-accent-cyan font-semibold">
+            {/* Title / Signature Standout Badge */}
+            <div className="flex items-center gap-2 text-xs text-accent-amber font-semibold">
               <TerminalIcon size={14} />
               <span>Interactive CLI</span>
             </div>
@@ -453,14 +453,14 @@ Navigating to /contact for direct scheduling...
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="p-1 rounded text-slate-400 hover:text-white transition-colors"
+                className="p-1 rounded text-content-muted hover:text-white transition-colors"
                 title={isExpanded ? 'Restore' : 'Maximize'}
               >
                 {isExpanded ? <Minimize2 size={15} /> : <Maximize2 size={15} />}
               </button>
               <button
                 onClick={onClose}
-                className="p-1 rounded text-slate-400 hover:text-white transition-colors"
+                className="p-1 rounded text-content-muted hover:text-white transition-colors"
                 title="Close"
               >
                 <X size={16} />
@@ -473,15 +473,15 @@ Navigating to /contact for direct scheduling...
             {history.map((item, idx) => {
               if (item.type === 'system') {
                 return (
-                  <div key={idx} className="text-accent-cyan/90 font-medium">
+                  <div key={idx} className="text-accent-moss font-medium">
                     {item.text}
                   </div>
                 );
               }
               if (item.type === 'input') {
                 return (
-                  <div key={idx} className="flex items-center gap-2 text-[#f2f3f8]">
-                    <span className="text-accent-cyan font-bold">ansh@portfolio:~$</span>
+                  <div key={idx} className="flex items-center gap-2 text-[#EDEDE6]">
+                    <span className="text-accent-amber font-bold">ansh@portfolio:~$</span>
                     <span>{item.text}</span>
                   </div>
                 );
@@ -496,7 +496,7 @@ Navigating to /contact for direct scheduling...
               return (
                 <div
                   key={idx}
-                  className="text-slate-200 whitespace-pre-wrap pl-2 border-l-2 border-accent-cyan/30"
+                  className="text-slate-200 whitespace-pre-wrap pl-2 border-l-2 border-accent-moss/40"
                 >
                   {item.text}
                 </div>
@@ -506,15 +506,15 @@ Navigating to /contact for direct scheduling...
           </div>
 
           {/* Quick Suggestion Pills */}
-          <div className="px-4 py-2 border-t border-white/5 bg-[#0a0c18] flex items-center gap-1.5 overflow-x-auto text-[11px]">
-            <span className="text-slate-500 shrink-0 mr-1 flex items-center gap-1">
-              <Sparkles size={11} className="text-accent-cyan" /> Suggested:
+          <div className="px-4 py-2 border-t border-white/5 bg-[#161B20] flex items-center gap-1.5 overflow-x-auto text-[11px]">
+            <span className="text-content-muted shrink-0 mr-1 flex items-center gap-1">
+              <Sparkles size={11} className="text-accent-moss" /> Suggested:
             </span>
             {quickPills.map((pill) => (
               <button
                 key={pill}
                 onClick={() => handleCommand(pill)}
-                className="px-2.5 py-1 rounded-md bg-white/5 hover:bg-accent-cyan/15 hover:text-accent-cyan border border-white/10 transition-colors shrink-0 text-slate-300"
+                className="px-2.5 py-1 rounded-md bg-white/5 hover:bg-accent-moss/20 hover:text-accent-moss border border-white/10 transition-colors shrink-0 text-slate-300"
               >
                 {pill}
               </button>
@@ -522,8 +522,8 @@ Navigating to /contact for direct scheduling...
           </div>
 
           {/* Input Prompt */}
-          <div className="flex items-center gap-2 px-4 py-3 bg-[#0f1120] border-t border-white/10">
-            <span className="text-accent-cyan font-bold text-xs sm:text-sm shrink-0">
+          <div className="flex items-center gap-2 px-4 py-3 bg-[#1B2127] border-t border-white/10">
+            <span className="text-accent-amber font-bold text-xs sm:text-sm shrink-0">
               ansh@portfolio:~$
             </span>
             <input
@@ -533,11 +533,11 @@ Navigating to /contact for direct scheduling...
               onChange={(e) => setInputVal(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Type a command (e.g. help, skills, sudo hire-me)..."
-              className="flex-1 bg-transparent text-[#f2f3f8] placeholder-slate-500 text-xs sm:text-sm focus:outline-none font-mono"
+              className="flex-1 bg-transparent text-[#EDEDE6] placeholder-content-muted text-xs sm:text-sm focus:outline-none font-mono"
             />
             <button
               onClick={() => handleCommand(inputVal)}
-              className="p-1.5 rounded-lg text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
+              className="p-1.5 rounded-lg text-accent-moss hover:bg-accent-moss/10 transition-colors"
               title="Run Command"
             >
               <CornerDownLeft size={16} />

@@ -71,12 +71,12 @@ export const ActivityPage = () => {
         {/* Action / Refresh Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-3xl hud-card border border-slate-200 dark:border-white/10">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-[#0f1120] border border-slate-200 dark:border-white/15 flex items-center justify-center text-accent-cyan shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-[#1B2127] border border-slate-200 dark:border-white/15 flex items-center justify-center text-accent-moss shrink-0">
               <Github size={24} />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                   @ThakurAnsh33
                 </h3>
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
@@ -84,7 +84,7 @@ export const ActivityPage = () => {
                   REST API Connected
                 </span>
               </div>
-              <p className="text-xs text-slate-600 dark:text-[#a6adc8]">
+              <p className="text-xs text-slate-600 dark:text-[#9AA39A]">
                 Cached every 15 mins to maintain rate limits with GitHub Octokit REST.
               </p>
             </div>
@@ -94,7 +94,7 @@ export const ActivityPage = () => {
             <button
               onClick={loadStats}
               title="Refresh GitHub Statistics"
-              className="p-2.5 rounded-xl hud-card text-slate-700 dark:text-[#a6adc8] hover:text-accent-cyan border border-slate-200 dark:border-white/10 flex items-center gap-2 text-xs font-semibold transition-colors"
+              className="p-2.5 rounded-xl hud-card text-slate-700 dark:text-[#9AA39A] hover:text-accent-moss border border-slate-200 dark:border-white/10 flex items-center gap-2 text-xs font-semibold transition-colors"
             >
               <RefreshCw size={14} className={loading ? 'animate-spin' : ''} />
               <span>Refresh Telemetry</span>
@@ -131,10 +131,10 @@ export const ActivityPage = () => {
         {error && !stats && (
           <div className="p-8 text-center rounded-3xl hud-card border border-rose-500/30 bg-rose-500/5 space-y-4 max-w-lg mx-auto">
             <AlertCircle size={28} className="text-rose-400 mx-auto" />
-            <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+            <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
               GitHub Telemetry Paused
             </h4>
-            <p className="text-xs text-slate-600 dark:text-[#a6adc8]">
+            <p className="text-xs text-slate-600 dark:text-[#9AA39A]">
               {error}. You can view the live profile directly on GitHub.
             </p>
             <div className="flex justify-center gap-3">
@@ -159,8 +159,8 @@ export const ActivityPage = () => {
             {/* Quick Metrics Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="p-5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 text-center">
-                <BookOpen size={20} className="text-accent-cyan mx-auto mb-2" />
-                <div className="text-2xl font-extrabold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                <BookOpen size={20} className="text-accent-moss mx-auto mb-2" />
+                <div className="text-2xl font-extrabold font-heading text-slate-900 dark:text-[#EDEDE6]">
                   {stats.publicRepos || 18}
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
@@ -170,7 +170,7 @@ export const ActivityPage = () => {
 
               <div className="p-5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 text-center">
                 <Star size={20} className="text-amber-400 mx-auto mb-2" />
-                <div className="text-2xl font-extrabold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                <div className="text-2xl font-extrabold font-heading text-slate-900 dark:text-[#EDEDE6]">
                   {stats.totalStars || 12}
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
@@ -180,7 +180,7 @@ export const ActivityPage = () => {
 
               <div className="p-5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 text-center">
                 <Users size={20} className="text-emerald-400 mx-auto mb-2" />
-                <div className="text-2xl font-extrabold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                <div className="text-2xl font-extrabold font-heading text-slate-900 dark:text-[#EDEDE6]">
                   {stats.followers || 15}
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
@@ -190,7 +190,7 @@ export const ActivityPage = () => {
 
               <div className="p-5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 text-center">
                 <GitFork size={20} className="text-purple-400 mx-auto mb-2" />
-                <div className="text-2xl font-extrabold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                <div className="text-2xl font-extrabold font-heading text-slate-900 dark:text-[#EDEDE6]">
                   {stats.totalForks || 8}
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
@@ -203,14 +203,14 @@ export const ActivityPage = () => {
             <div className="space-y-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                  <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                     Featured Public Repositories
                   </h3>
-                  <p className="text-xs text-slate-600 dark:text-[#a6adc8] mt-0.5">
+                  <p className="text-xs text-slate-600 dark:text-[#9AA39A] mt-0.5">
                     Synchronized directly from GitHub REST v3
                   </p>
                 </div>
-                <span className="text-xs font-mono text-accent-cyan">
+                <span className="text-xs font-mono text-accent-moss">
                   {(stats.recentRepos || []).length} Active Repos
                 </span>
               </div>
@@ -219,7 +219,7 @@ export const ActivityPage = () => {
                 {(stats.recentRepos || []).map((repo) => (
                   <div
                     key={repo.id || repo.name}
-                    className="p-6 rounded-3xl hud-card border border-slate-200 dark:border-white/10 flex flex-col justify-between hover:border-accent-cyan/40 transition-colors group space-y-4"
+                    className="p-6 rounded-3xl hud-card border border-slate-200 dark:border-white/10 flex flex-col justify-between hover:border-accent-moss/40 transition-colors group space-y-4"
                   >
                     <div className="space-y-2.5">
                       <div className="flex items-center justify-between">
@@ -227,7 +227,7 @@ export const ActivityPage = () => {
                           href={repo.url || repo.html_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-heading font-bold text-base text-slate-900 dark:text-[#f2f3f8] group-hover:text-accent-cyan transition-colors flex items-center gap-1.5"
+                          className="font-heading font-bold text-base text-slate-900 dark:text-[#EDEDE6] group-hover:text-accent-moss transition-colors flex items-center gap-1.5"
                         >
                           <span>{repo.name}</span>
                           <ExternalLink size={13} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -245,7 +245,7 @@ export const ActivityPage = () => {
                         </div>
                       </div>
 
-                      <p className="text-xs sm:text-sm text-slate-600 dark:text-[#a6adc8] leading-relaxed line-clamp-2">
+                      <p className="text-xs sm:text-sm text-slate-600 dark:text-[#9AA39A] leading-relaxed line-clamp-2">
                         {repo.description || 'Full-stack application architecture and REST service implementation.'}
                       </p>
                     </div>
@@ -255,7 +255,7 @@ export const ActivityPage = () => {
                         <div className="flex items-center gap-1.5">
                           <span
                             className={`w-2 h-2 rounded-full ${
-                              languageColorMap[repo.language] || 'bg-accent-cyan'
+                              languageColorMap[repo.language] || 'bg-accent-moss'
                             }`}
                           />
                           <span>{repo.language}</span>
@@ -265,7 +265,7 @@ export const ActivityPage = () => {
                         href={repo.url || repo.html_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-accent-cyan hover:underline font-bold"
+                        className="text-accent-moss hover:underline font-bold"
                       >
                         Inspect Code →
                       </a>

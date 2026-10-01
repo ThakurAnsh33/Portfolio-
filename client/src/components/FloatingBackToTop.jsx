@@ -35,7 +35,7 @@ export const FloatingBackToTop = () => {
           onClick={scrollToTop}
           aria-label="Back to top"
           title="Back to Top"
-          className="fixed bottom-7 right-7 z-40 p-3 rounded-2xl hud-card border border-accent-cyan/30 text-accent-cyan hover:border-accent-cyan hover:bg-accent-cyan/10 shadow-lg shadow-black/40 backdrop-blur-md transition-all duration-200 group"
+          className="fixed bottom-7 right-7 z-40 p-3 rounded-2xl hud-card border border-accent-moss/30 text-accent-moss hover:border-accent-moss hover:bg-accent-moss/10 shadow-lg shadow-black/40 backdrop-blur-md transition-all duration-200 group"
         >
           <ArrowUp size={18} className="transform group-hover:-translate-y-0.5 transition-transform duration-200" />
         </motion.button>

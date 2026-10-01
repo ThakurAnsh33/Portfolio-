@@ -16,7 +16,7 @@ export const ScrollProgress = () => {
   return (
     <motion.div
       style={{ scaleX }}
-      className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-accent-cyan via-brand-blue to-accent-violet z-[100] origin-left pointer-events-none shadow-[0_0_10px_rgba(79,209,255,0.8)]"
+      className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-accent-moss via-accent-mossDeep to-accent-moss z-[100] origin-left pointer-events-none shadow-[0_0_8px_rgba(122,148,113,0.6)]"
       aria-hidden="true"
     />
   );

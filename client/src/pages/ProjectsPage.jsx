@@ -66,7 +66,7 @@ export const ProjectsPage = () => {
 
         {/* Query Filter Banner if tech query is active */}
         {techQuery && (
-          <div className="flex items-center justify-between p-4 rounded-2xl bg-accent-cyan/10 border border-accent-cyan/30 text-xs sm:text-sm font-mono text-accent-cyan max-w-2xl mx-auto">
+          <div className="flex items-center justify-between p-4 rounded-2xl bg-accent-moss/10 border border-accent-moss/30 text-xs sm:text-sm font-mono text-accent-moss max-w-2xl mx-auto">
             <div className="flex items-center gap-2">
               <Filter size={15} />
               <span>
@@ -75,7 +75,7 @@ export const ProjectsPage = () => {
             </div>
             <button
               onClick={clearTechFilter}
-              className="p-1 rounded-lg hover:bg-accent-cyan/20 transition-colors flex items-center gap-1 text-xs"
+              className="p-1 rounded-lg hover:bg-accent-moss/20 transition-colors flex items-center gap-1 text-xs"
               title="Clear filter"
             >
               <span>Clear</span>
@@ -97,8 +97,8 @@ export const ProjectsPage = () => {
                 }}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
                   isActive
-                    ? 'btn-hud-primary text-[#05060f]'
-                    : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-cyan hover:text-accent-cyan'
+                    ? 'btn-hud-primary text-[#12161A]'
+                    : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-moss hover:text-accent-moss'
                 }`}
               >
                 {filter}
@@ -132,10 +132,10 @@ export const ProjectsPage = () => {
             <div className="w-12 h-12 rounded-2xl bg-white/5 text-slate-400 flex items-center justify-center mx-auto">
               <Code2 size={24} />
             </div>
-            <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+            <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
               No Projects Found for "{techQuery || activeFilter}"
             </h4>
-            <p className="text-xs text-slate-600 dark:text-[#a6adc8]">
+            <p className="text-xs text-slate-600 dark:text-content-muted">
               Try resetting the active technology filter or browse the entire catalog.
             </p>
             <button
@@ -153,15 +153,15 @@ export const ProjectsPage = () => {
         {/* GitHub Repository Link Banner */}
         <div className="text-center pt-8">
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 sm:px-6 sm:py-3.5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 shadow-lg">
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 dark:text-[#e6e6f0]">
-              <Github size={16} className="text-accent-cyan" />
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 dark:text-[#EDEDE6]">
+              <Github size={16} className="text-accent-moss" />
               <span>Looking for additional experimental repositories and CLI utilities?</span>
             </div>
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-accent-cyan hover:text-accent-violet transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-accent-moss hover:text-accent-mossDeep transition-colors"
             >
               <span>Explore GitHub (@ThakurAnsh33)</span>
               <ArrowRight size={14} />

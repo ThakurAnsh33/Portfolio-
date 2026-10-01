@@ -38,8 +38,8 @@ export const Projects = () => {
                 onClick={() => setActiveFilter(filter)}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
                   isActive
-                    ? 'btn-hud-primary text-[#05060f]'
-                    : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-cyan hover:text-accent-cyan'
+                    ? 'btn-hud-primary text-[#12161A]'
+                    : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-moss hover:text-accent-moss'
                 }`}
               >
                 {filter}
@@ -67,15 +67,15 @@ export const Projects = () => {
           className="mt-14 text-center"
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 sm:px-6 sm:py-3.5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 shadow-lg">
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 dark:text-[#e6e6f0]">
-              <Code size={16} className="text-accent-cyan" />
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 dark:text-[#EDEDE6]">
+              <Code size={16} className="text-accent-moss" />
               <span>Explore more repositories, experiments, and open-source code on GitHub.</span>
             </div>
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-accent-cyan hover:text-accent-violet transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-accent-moss hover:text-accent-mossDeep transition-colors"
             >
               <span>View GitHub (@ThakurAnsh33)</span>
               <ArrowRight size={14} />

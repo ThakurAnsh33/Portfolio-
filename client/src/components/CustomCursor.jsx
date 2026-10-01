@@ -83,11 +83,11 @@ export const CustomCursor = () => {
         animate={{
           scale: isHovered ? 1.6 : 1,
           opacity: isVisible ? 1 : 0,
-          borderColor: isHovered ? 'rgba(79, 209, 255, 0.9)' : 'rgba(79, 209, 255, 0.45)',
-          backgroundColor: isHovered ? 'rgba(79, 209, 255, 0.08)' : 'transparent',
+          borderColor: isHovered ? 'rgba(122, 148, 113, 0.9)' : 'rgba(122, 148, 113, 0.45)',
+          backgroundColor: isHovered ? 'rgba(122, 148, 113, 0.12)' : 'transparent',
         }}
         transition={{ duration: 0.18 }}
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-accent-cyan/50 pointer-events-none backdrop-blur-[0.5px]"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-accent-moss/50 pointer-events-none backdrop-blur-[0.5px]"
       />
 
       {/* Inner Pinpoint Center Dot */}
@@ -103,7 +103,7 @@ export const CustomCursor = () => {
           opacity: isVisible ? 1 : 0,
         }}
         transition={{ duration: 0.1 }}
-        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-accent-cyan pointer-events-none shadow-[0_0_8px_rgba(79,209,255,0.9)]"
+        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-accent-moss pointer-events-none shadow-[0_0_8px_rgba(122,148,113,0.8)]"
       />
     </div>
   );

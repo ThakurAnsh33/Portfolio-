@@ -125,8 +125,8 @@ export const SkillsPage = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
                   isActive
-                    ? 'btn-hud-primary text-[#05060f]'
-                    : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-cyan hover:text-accent-cyan'
+                    ? 'btn-hud-primary text-[#12161A]'
+                    : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-moss hover:text-accent-moss'
                 }`}
               >
                 {cat}
@@ -147,14 +147,14 @@ export const SkillsPage = () => {
               >
                 <div className="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-4">
                   <div>
-                    <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                    <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                       {cat.category}
                     </h3>
-                    <p className="text-xs text-slate-600 dark:text-[#a6adc8] mt-0.5">
+                    <p className="text-xs text-slate-600 dark:text-content-muted mt-0.5">
                       {cat.description}
                     </p>
                   </div>
-                  <span className="text-xs font-mono px-2.5 py-1 rounded-md bg-accent-cyan/10 text-accent-cyan font-semibold border border-accent-cyan/20">
+                  <span className="text-xs font-mono px-2.5 py-1 rounded-md bg-accent-moss/10 text-accent-moss font-semibold border border-accent-moss/20">
                     {cat.skills.length} Technologies
                   </span>
                 </div>
@@ -172,8 +172,8 @@ export const SkillsPage = () => {
                         onMouseEnter={() => setActiveSkill(skill)}
                         className={`p-4 rounded-2xl cursor-pointer border transition-all duration-200 flex flex-col justify-between space-y-3 ${
                           isCurrent
-                            ? 'bg-accent-cyan/10 border-accent-cyan shadow-lg shadow-accent-cyan/10 scale-[1.02]'
-                            : 'bg-slate-50 dark:bg-[#0f1120] border-slate-200 dark:border-white/5 hover:border-accent-cyan/50'
+                            ? 'bg-accent-moss/10 border-accent-moss shadow-lg shadow-accent-moss/10 scale-[1.02]'
+                            : 'bg-slate-50 dark:bg-[#1B2127] border-slate-200 dark:border-white/5 hover:border-accent-moss/50'
                         }`}
                       >
                         <div className="flex items-center justify-between">
@@ -182,22 +182,22 @@ export const SkillsPage = () => {
                               className="w-10 h-10 rounded-xl flex items-center justify-center text-xl shadow-sm"
                               style={{
                                 backgroundColor: `${skill.color}15`,
-                                color: skill.color || '#4fd1ff',
+                                color: skill.color || '#7A9471',
                               }}
                             >
                               <IconComponent />
                             </div>
                             <div>
-                              <div className="font-heading font-bold text-sm text-slate-900 dark:text-[#f2f3f8]">
+                              <div className="font-heading font-bold text-sm text-slate-900 dark:text-[#EDEDE6]">
                                 {skill.name}
                               </div>
-                              <div className="text-[11px] text-slate-500 dark:text-[#a6adc8]">
+                              <div className="text-[11px] text-slate-500 dark:text-content-muted">
                                 {related.length > 0 ? `${related.length} Linked Project${related.length > 1 ? 's' : ''}` : 'Foundation'}
                               </div>
                             </div>
                           </div>
 
-                          <span className="text-xs font-mono font-bold text-accent-cyan">
+                          <span className="text-xs font-mono font-bold text-accent-moss">
                             {skill.level}%
                           </span>
                         </div>
@@ -211,7 +211,7 @@ export const SkillsPage = () => {
                             transition={{ duration: 0.8, ease: 'easeOut' }}
                             className="h-full rounded-full"
                             style={{
-                              backgroundColor: skill.color || '#4fd1ff',
+                              backgroundColor: skill.color || '#7A9471',
                             }}
                           />
                         </div>
@@ -225,9 +225,9 @@ export const SkillsPage = () => {
 
           {/* Right: Active Skill Real-World Inspector & Project Connector */}
           <div className="lg:col-span-4 sticky top-24 space-y-6">
-            <div className="p-6 rounded-3xl hud-card border border-accent-cyan/40 dark:bg-[#05060f]/95 bg-white/95 shadow-2xl space-y-5">
+            <div className="p-6 rounded-3xl hud-card border border-accent-moss/40 dark:bg-[#12161A]/95 bg-white/95 shadow-2xl space-y-5">
               <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/10">
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-accent-cyan">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-accent-moss">
                   <Sparkles size={14} />
                   <span>Project Link Inspector</span>
                 </span>
@@ -248,7 +248,7 @@ export const SkillsPage = () => {
                           className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl shadow-md"
                           style={{
                             backgroundColor: `${activeSkill.color}25`,
-                            color: activeSkill.color || '#4fd1ff',
+                            color: activeSkill.color || '#7A9471',
                           }}
                         >
                           <ActiveIcon />
@@ -259,7 +259,7 @@ export const SkillsPage = () => {
                       <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-white">
                         {activeSkill.name}
                       </h4>
-                      <div className="text-xs font-mono text-accent-cyan font-semibold">
+                      <div className="text-xs font-mono text-accent-moss font-semibold">
                         Assessed Proficiency: {activeSkill.level}%
                       </div>
                     </div>
@@ -267,7 +267,7 @@ export const SkillsPage = () => {
 
                   {/* Connected Projects */}
                   <div>
-                    <div className="text-xs font-mono text-slate-600 dark:text-slate-400 mb-2.5">
+                    <div className="text-xs font-mono text-slate-600 dark:text-content-muted mb-2.5">
                       Production &amp; Hackathon Implementations:
                     </div>
 
@@ -277,20 +277,20 @@ export const SkillsPage = () => {
                           <Link
                             key={p.id}
                             to={`/projects/${p.id}`}
-                            className="p-3 rounded-xl dark:bg-[#0f1120] bg-slate-50 border border-slate-200 dark:border-white/10 hover:border-accent-cyan block transition-colors group"
+                            className="p-3 rounded-xl dark:bg-[#1B2127] bg-slate-50 border border-slate-200 dark:border-white/10 hover:border-accent-moss block transition-colors group"
                           >
-                            <div className="flex items-center justify-between text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-accent-cyan">
+                            <div className="flex items-center justify-between text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-accent-moss">
                               <span>{p.title.split('—')[0].trim()}</span>
                               <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                             </div>
-                            <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
+                            <p className="text-[11px] text-slate-600 dark:text-content-muted mt-1 line-clamp-2 leading-relaxed">
                               {p.description}
                             </p>
                           </Link>
                         ))}
                       </div>
                     ) : (
-                      <div className="p-4 rounded-xl dark:bg-[#0f1120] bg-slate-50 border border-slate-200 dark:border-white/5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                      <div className="p-4 rounded-xl dark:bg-[#1B2127] bg-slate-50 border border-slate-200 dark:border-white/5 text-xs text-slate-600 dark:text-content-muted leading-relaxed">
                         Core academic coursework and technical certifications in progress.
                       </div>
                     )}
@@ -319,7 +319,7 @@ export const SkillsPage = () => {
 
             {/* Quick Summary Strip */}
             <div className="p-5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 text-xs font-mono text-slate-600 dark:text-slate-400 space-y-2">
-              <div className="flex items-center gap-2 text-accent-cyan font-bold">
+              <div className="flex items-center gap-2 text-accent-moss font-bold">
                 <CheckCircle2 size={14} />
                 <span>Zero Stale Dependencies</span>
               </div>

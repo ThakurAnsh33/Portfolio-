@@ -9,8 +9,8 @@
   
   body {
     overflow-x: hidden;
-    background-color: #f8fafc;
-    color: #0f172a;
+    background-color: #F4F4EE;
+    color: #14181C;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 16px;
     line-height: 1.65;
@@ -18,11 +18,11 @@
 
   html.dark body,
   .dark body {
-    background-color: #05060f;
-    color: #f2f3f8;
+    background-color: #12161A;
+    color: #EDEDE6;
   }
 
-  /* Custom Sleek Futuristic Scrollbar */
+  /* Custom Sleek Survey Instrument Scrollbar */
   ::-webkit-scrollbar {
     width: 7px;
   }
@@ -30,72 +30,86 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: #b5beb0;
     border-radius: 9999px;
   }
   .dark ::-webkit-scrollbar-thumb {
-    background: rgba(79, 209, 255, 0.2);
+    background: rgba(122, 148, 113, 0.25);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #0284c7;
+    background: #5C7054;
   }
   .dark ::-webkit-scrollbar-thumb:hover {
-    background: #4fd1ff;
+    background: #7A9471;
   }
 }
 
 @layer utilities {
   /* High-Contrast Dynamic Accent Colors (WCAG AA Compliant in both Light and Dark) */
+  .text-accent-moss {
+    color: #5C7054; /* Moss deep in light mode */
+  }
+  .dark .text-accent-moss {
+    color: #7A9471; /* Moss green interactive accent in dark mode */
+  }
+
+  .text-accent-amber {
+    color: #B5833C; /* Amber deep in light mode */
+  }
+  .dark .text-accent-amber {
+    color: #D9A85C; /* Amber standout in dark mode */
+  }
+
   .text-accent-cyan {
-    color: #0284c7; /* Sky 600 / rich deep cyan-blue in light mode */
+    color: #5C7054; /* Backwards compatibility alias -> moss deep in light mode */
   }
   .dark .text-accent-cyan {
-    color: #4fd1ff; /* Electric cyan glow in dark mode */
+    color: #7A9471; /* Backwards compatibility alias -> moss in dark mode */
   }
 
   .text-accent-violet {
-    color: #7c3aed; /* Deep violet in light mode */
+    color: #4E6047; /* Backwards compatibility alias */
   }
   .dark .text-accent-violet {
-    color: #a78bfa; /* Soft neon violet in dark mode */
+    color: #5C7054; /* Backwards compatibility alias */
   }
 
   /* Futuristic HUD Glassmorphic Card */
   .hud-card {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    border: 1px solid rgba(85, 96, 79, 0.20);
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
-    color: #0f172a;
+    color: #14181C;
   }
 
   .dark .hud-card {
-    background-color: rgba(15, 17, 32, 0.82);
+    background-color: rgba(27, 33, 39, 0.78);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(79, 209, 255, 0.16);
-    box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    color: #f2f3f8;
+    border: 1px solid rgba(154, 163, 154, 0.14);
+    box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(237, 237, 230, 0.08);
+    color: #EDEDE6;
   }
 
   /* Glass Card alias for consistency */
   .glass-card {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    border: 1px solid rgba(85, 96, 79, 0.20);
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
-    color: #0f172a;
+    color: #14181C;
   }
 
   .dark .glass-card {
-    background-color: rgba(15, 17, 32, 0.82);
+    background-color: rgba(27, 33, 39, 0.78);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(79, 209, 255, 0.16);
-    box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    color: #f2f3f8;
+    border: 1px solid rgba(154, 163, 154, 0.14);
+    box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(237, 237, 230, 0.08);
+    color: #EDEDE6;
   }
 
   .hud-card-interactive {
@@ -104,33 +118,33 @@
 
   .hud-card-interactive:hover {
     transform: translateY(-3px);
-    border-color: rgba(2, 132, 199, 0.4);
+    border-color: rgba(122, 148, 113, 0.45);
     box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.08);
   }
 
   .dark .hud-card-interactive:hover {
-    border-color: rgba(167, 139, 250, 0.45);
-    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.75), 0 0 25px -4px rgba(79, 209, 255, 0.25);
+    border-color: rgba(122, 148, 113, 0.45);
+    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.75), 0 0 20px -4px rgba(122, 148, 113, 0.2);
   }
 
   /* HUD Accent Gradient */
   .hud-gradient-accent {
-    background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #5C7054 0%, #7A9471 100%);
   }
 
   .dark .hud-gradient-accent {
-    background: linear-gradient(135deg, #4fd1ff 0%, #a78bfa 100%);
+    background: linear-gradient(135deg, #7A9471 0%, #5C7054 100%);
   }
 
   /* Large Headline Gradient */
   .hud-headline-gradient {
-    background: linear-gradient(135deg, #0f172a 35%, #0284c7 100%);
+    background: linear-gradient(135deg, #14181C 50%, #5C7054 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .dark .hud-headline-gradient {
-    background: linear-gradient(135deg, #ffffff 40%, #4fd1ff 100%);
+    background: linear-gradient(135deg, #EDEDE6 60%, #7A9471 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -138,51 +152,54 @@
   /* Glowing Accent Lines */
   .hud-glow-line {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(2, 132, 199, 0.3), rgba(124, 58, 237, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(92, 112, 84, 0.3), transparent);
   }
 
   .dark .hud-glow-line {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(79, 209, 255, 0.6), rgba(167, 139, 250, 0.6), transparent);
+    background: linear-gradient(90deg, transparent, rgba(122, 148, 113, 0.45), transparent);
   }
 
-  /* Circuit & Technical Grid Pattern */
+  /* Circuit & Technical Survey Grid Pattern */
   .bg-hud-grid {
     background-size: 48px 48px;
     background-image: 
-      linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+      linear-gradient(to right, rgba(85, 96, 79, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(85, 96, 79, 0.08) 1px, transparent 1px);
   }
 
   .dark .bg-hud-grid {
     background-size: 48px 48px;
     background-image: 
-      linear-gradient(to right, rgba(79, 209, 255, 0.045) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(79, 209, 255, 0.045) 1px, transparent 1px);
+      linear-gradient(to right, rgba(154, 163, 154, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(154, 163, 154, 0.07) 1px, transparent 1px);
   }
 
   /* Primary Button Styling */
   .btn-hud-primary {
-    background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
-    color: #ffffff;
+    background: #5C7054;
+    color: #FFFFFF;
     font-weight: 700;
-    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    box-shadow: 0 4px 14px rgba(92, 112, 84, 0.3);
     transition: all 0.3s ease;
   }
 
   .btn-hud-primary:hover {
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    background: #4E6047;
+    box-shadow: 0 6px 18px rgba(92, 112, 84, 0.4);
     transform: translateY(-2px);
   }
 
   .dark .btn-hud-primary {
-    background: linear-gradient(135deg, #4fd1ff 0%, #a78bfa 100%);
-    color: #05060f;
-    box-shadow: 0 0 24px -3px rgba(79, 209, 255, 0.5);
+    background: #7A9471;
+    color: #12161A;
+    font-weight: 700;
+    box-shadow: 0 0 20px -3px rgba(122, 148, 113, 0.4);
   }
 
   .dark .btn-hud-primary:hover {
-    box-shadow: 0 0 35px 2px rgba(167, 139, 250, 0.65);
+    background: #8AA680;
+    box-shadow: 0 0 28px 0 rgba(122, 148, 113, 0.55);
     transform: translateY(-2px);
   }
 }

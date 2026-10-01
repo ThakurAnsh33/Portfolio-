@@ -83,7 +83,7 @@ export const ContactPage = () => {
       const count = 100;
       const confettiConfig = {
         origin: { y: 0.7 },
-        colors: ['#4fd1ff', '#a78bfa', '#3b82f6', '#10b981', '#f2f3f8'],
+        colors: ['#7A9471', '#5C7054', '#D9A85C', '#EDEDE6', '#B5833C'],
         disableForReducedMotion: true,
       };
       confetti({ ...confettiConfig, particleCount: 60, spread: 80 });
@@ -165,10 +165,10 @@ export const ContactPage = () => {
           <div className="lg:col-span-5 space-y-6">
             <div className="p-6 sm:p-8 rounded-3xl hud-card border border-slate-200 dark:border-white/10 space-y-6">
               <div>
-                <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                   Contact Information
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-[#a6adc8] mt-1">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-[#9AA39A] mt-1">
                   Expected response latency: <strong className="text-emerald-500 font-mono">&lt; 12 Hours</strong>
                 </p>
               </div>
@@ -179,16 +179,16 @@ export const ContactPage = () => {
                   const content = (
                     <div
                       key={idx}
-                      className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#0f1120] border border-slate-200 dark:border-white/5 hover:border-accent-cyan/40 flex items-center gap-3.5 transition-colors"
+                      className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#1B2127] border border-slate-200 dark:border-white/5 hover:border-accent-moss/40 flex items-center gap-3.5 transition-colors"
                     >
-                      <div className="w-10 h-10 rounded-xl bg-accent-cyan/10 text-accent-cyan flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-accent-moss/10 text-accent-moss flex items-center justify-center shrink-0">
                         <IconComp size={18} />
                       </div>
                       <div className="overflow-hidden">
                         <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
                           {c.label}
                         </div>
-                        <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#f2f3f8] truncate">
+                        <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#EDEDE6] truncate">
                           {c.value}
                         </div>
                       </div>
@@ -220,16 +220,16 @@ export const ContactPage = () => {
 
           {/* Right Column: Contact Message Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-10 rounded-3xl hud-card border border-accent-cyan/30 dark:bg-[#05060f]/95 bg-white/95 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent-cyan/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="p-6 sm:p-10 rounded-3xl hud-card border border-accent-moss/30 dark:bg-[#12161A]/95 bg-white/95 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent-moss/5 rounded-full blur-3xl pointer-events-none" />
 
               <div className="relative z-10 space-y-6">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8] flex items-center gap-2">
-                    <MessageSquare size={22} className="text-accent-cyan" />
+                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6] flex items-center gap-2">
+                    <MessageSquare size={22} className="text-accent-moss" />
                     <span>Send a Dispatch</span>
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-[#a6adc8] mt-1">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-[#9AA39A] mt-1">
                     Delivered via MongoDB persistence pipeline with instant Nodemailer email alert.
                   </p>
                 </div>
@@ -257,10 +257,10 @@ export const ContactPage = () => {
                       onChange={handleChange}
                       onBlur={() => handleBlur('name')}
                       placeholder="e.g. Maya Chen"
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#0f1120] text-slate-900 dark:text-white placeholder-slate-500 text-sm border focus:outline-none transition-colors ${
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#1B2127] text-slate-900 dark:text-white placeholder-slate-500 text-sm border focus:outline-none transition-colors ${
                         touched.name && !isNameValid
                           ? 'border-rose-500/50'
-                          : 'border-slate-200 dark:border-white/10 focus:border-accent-cyan'
+                          : 'border-slate-200 dark:border-white/10 focus:border-accent-moss'
                       }`}
                     />
                   </div>
@@ -280,10 +280,10 @@ export const ContactPage = () => {
                       onChange={handleChange}
                       onBlur={() => handleBlur('email')}
                       placeholder="e.g. recruiter@company.com"
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#0f1120] text-slate-900 dark:text-white placeholder-slate-500 text-sm border focus:outline-none transition-colors ${
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#1B2127] text-slate-900 dark:text-white placeholder-slate-500 text-sm border focus:outline-none transition-colors ${
                         touched.email && !isEmailValid
                           ? 'border-rose-500/50'
-                          : 'border-slate-200 dark:border-white/10 focus:border-accent-cyan'
+                          : 'border-slate-200 dark:border-white/10 focus:border-accent-moss'
                       }`}
                     />
                   </div>
@@ -303,10 +303,10 @@ export const ContactPage = () => {
                       onChange={handleChange}
                       onBlur={() => handleBlur('message')}
                       placeholder="Discuss open roles, project requirements, or schedule a technical chat..."
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#0f1120] text-slate-900 dark:text-white placeholder-slate-500 text-sm border focus:outline-none transition-colors resize-none ${
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#1B2127] text-slate-900 dark:text-white placeholder-slate-500 text-sm border focus:outline-none transition-colors resize-none ${
                         touched.message && !isMessageValid
                           ? 'border-rose-500/50'
-                          : 'border-slate-200 dark:border-white/10 focus:border-accent-cyan'
+                          : 'border-slate-200 dark:border-white/10 focus:border-accent-moss'
                       }`}
                     />
                   </div>

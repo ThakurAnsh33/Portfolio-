@@ -28,7 +28,7 @@ export const Layout = () => {
   });
 
   return (
-    <div className="relative min-h-screen text-[#0b0d1a] dark:text-[#f2f3f8] selection:bg-[#4fd1ff] selection:text-[#05060f] transition-colors duration-300 font-sans antialiased flex flex-col justify-between">
+    <div className="relative min-h-screen text-[#14181C] dark:text-[#EDEDE6] selection:bg-[#7A9471] selection:text-[#12161A] transition-colors duration-300 font-sans antialiased flex flex-col justify-between">
       {/* Scroll restoration helper */}
       <ScrollToTop />
 
@@ -38,9 +38,9 @@ export const Layout = () => {
         toastOptions={{
           duration: 3500,
           style: {
-            background: 'rgba(15, 17, 32, 0.95)',
-            color: '#f2f3f8',
-            border: '1px solid rgba(79, 209, 255, 0.25)',
+            background: 'rgba(27, 33, 39, 0.95)',
+            color: '#EDEDE6',
+            border: '1px solid rgba(122, 148, 113, 0.35)',
             borderRadius: '12px',
             fontSize: '14px',
             fontWeight: '500',
@@ -49,8 +49,8 @@ export const Layout = () => {
           },
           success: {
             iconTheme: {
-              primary: '#4fd1ff',
-              secondary: '#05060f',
+              primary: '#7A9471',
+              secondary: '#12161A',
             },
           },
           error: {
@@ -115,8 +115,8 @@ export const Layout = () => {
 
       {/* Floating Quick Guide when 'G' key is initiated */}
       {gKeyPressed && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-xl hud-card border border-accent-cyan/60 bg-white/95 dark:bg-[#0f1120]/95 text-accent-cyan font-mono text-xs flex items-center gap-2 shadow-2xl backdrop-blur-md animate-bounce">
-          <span className="w-2 h-2 rounded-full bg-accent-cyan animate-ping" />
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-xl hud-card border border-accent-moss/60 bg-white/95 dark:bg-[#1B2127]/95 text-accent-moss font-mono text-xs flex items-center gap-2 shadow-2xl backdrop-blur-md animate-bounce">
+          <span className="w-2 h-2 rounded-full bg-accent-moss animate-ping" />
           <span>Go to: [H]ome, [A]bout, [S]kills, [E]xp, [P]rojects, [C]ontact, [D]egree, [G]itHub, [N]ow</span>
         </div>
       )}

@@ -43,7 +43,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
           className="group flex items-center gap-3"
         >
           <div className="w-10 h-10 rounded-xl p-[1.5px] hud-gradient-accent shadow-hud-glow flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shrink-0">
-            <div className="w-full h-full bg-white dark:bg-[#05060f] rounded-[10px] flex items-center justify-center text-accent-cyan font-heading font-extrabold text-base overflow-hidden relative">
+            <div className="w-full h-full bg-white dark:bg-[#12161A] rounded-[10px] flex items-center justify-center text-accent-moss font-heading font-extrabold text-base overflow-hidden relative">
               <img
                 src={personalInfo.profileImage || "/profile.png"}
                 alt={personalInfo.name}
@@ -55,11 +55,11 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
             </div>
           </div>
           <div>
-            <div className="font-heading font-extrabold text-lg sm:text-xl text-[#0b0d1a] dark:text-[#f2f3f8] tracking-tight leading-none group-hover:text-accent-cyan transition-colors">
+            <div className="font-heading font-extrabold text-lg sm:text-xl text-[#14181C] dark:text-[#EDEDE6] tracking-tight leading-none group-hover:text-accent-moss transition-colors">
               Ansh Singh
             </div>
             <div className="text-[11px] font-medium text-slate-500 dark:text-content-muted flex items-center gap-1.5 mt-0.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-amber animate-pulse" />
               <span>Full Stack MERN</span>
             </div>
           </div>
@@ -76,17 +76,17 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
                 to={link.href}
                 className={`relative px-4 py-1.5 text-sm font-semibold rounded-full transition-colors duration-200 ${
                   isActive
-                    ? 'text-[#0b0d1a] dark:text-[#f2f3f8]'
-                    : 'text-slate-600 dark:text-content-muted hover:text-[#0b0d1a] dark:hover:text-[#f2f3f8]'
+                    ? 'text-[#14181C] dark:text-[#EDEDE6]'
+                    : 'text-slate-600 dark:text-content-muted hover:text-[#14181C] dark:hover:text-[#EDEDE6]'
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="hudNavGlowUnderline"
-                    className="absolute inset-0 rounded-full bg-accent-cyan/15 dark:bg-accent-cyan/20 border border-accent-cyan/40"
+                    className="absolute inset-0 rounded-full bg-accent-moss/15 dark:bg-accent-moss/20 border border-accent-moss/40"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   >
-                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-accent-cyan shadow-hud-glow" />
+                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-accent-moss shadow-hud-glow" />
                   </motion.div>
                 )}
                 <span className="relative z-10">{link.name}</span>
@@ -102,11 +102,11 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
             <button
               onClick={onOpenTerminal}
               aria-label="Open Terminal"
-              className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-cyan dark:hover:text-accent-cyan flex items-center gap-1.5"
+              className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-moss dark:hover:text-accent-moss flex items-center gap-1.5"
               title="Open Interactive Terminal (Ctrl+K)"
             >
               <Terminal size={17} />
-              <span className="text-[10px] font-mono text-accent-cyan font-semibold border border-accent-cyan/30 rounded px-1.5 py-0.5 hidden xl:inline">
+              <span className="text-[10px] font-mono text-accent-moss font-semibold border border-accent-moss/30 rounded px-1.5 py-0.5 hidden xl:inline">
                 Ctrl+K
               </span>
             </button>
@@ -117,7 +117,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
             <button
               onClick={onOpenShortcuts}
               aria-label="Keyboard Shortcuts"
-              className="w-9 h-9 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-cyan dark:hover:text-accent-cyan font-mono text-xs font-bold flex items-center justify-center"
+              className="w-9 h-9 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-moss dark:hover:text-accent-moss font-mono text-xs font-bold flex items-center justify-center"
               title="Keyboard Shortcuts (?)"
             >
               ?
@@ -130,7 +130,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
-            className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-cyan dark:hover:text-accent-cyan"
+            className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-moss dark:hover:text-accent-moss"
             title="LinkedIn Profile"
           >
             <Linkedin size={17} />
@@ -142,7 +142,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
-            className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-cyan dark:hover:text-accent-cyan"
+            className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-moss dark:hover:text-accent-moss"
             title="GitHub Profile"
           >
             <Github size={17} />
@@ -155,11 +155,11 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-cyan dark:hover:text-accent-cyan"
+            className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-moss dark:hover:text-accent-moss"
             title={theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
           >
             {theme === 'dark' ? (
-              <Sun size={17} className="text-accent-cyan" />
+              <Sun size={17} className="text-accent-moss" />
             ) : (
               <Moon size={17} className="text-slate-800" />
             )}
@@ -185,7 +185,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
-            className="p-2 rounded-lg hud-card text-accent-cyan"
+            className="p-2 rounded-lg hud-card text-accent-moss"
           >
             <Linkedin size={17} />
           </a>
@@ -195,7 +195,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
             aria-label="Toggle theme"
             className="p-2 rounded-lg hud-card text-slate-700 dark:text-content-muted"
           >
-            {theme === 'dark' ? <Sun size={17} className="text-accent-cyan" /> : <Moon size={17} />}
+            {theme === 'dark' ? <Sun size={17} className="text-accent-moss" /> : <Moon size={17} />}
           </button>
 
           <button
@@ -230,8 +230,8 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
                       isActive
-                        ? 'bg-accent-cyan/15 text-accent-cyan border border-accent-cyan/30'
-                        : 'text-slate-700 dark:text-content-muted hover:text-[#0b0d1a] dark:hover:text-[#f2f3f8]'
+                        ? 'bg-accent-moss/15 text-accent-moss border border-accent-moss/30'
+                        : 'text-slate-700 dark:text-content-muted hover:text-[#14181C] dark:hover:text-[#EDEDE6]'
                     }`}
                   >
                     {link.name}
@@ -246,7 +246,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
                       setMobileMenuOpen(false);
                       onOpenTerminal();
                     }}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold hud-card text-accent-cyan border border-accent-cyan/30"
+                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold hud-card text-accent-moss border border-accent-moss/30"
                   >
                     <Terminal size={15} />
                     <span>Launch Terminal CLI (Ctrl+K)</span>
@@ -258,7 +258,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
                     href={personalInfo.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl text-xs font-semibold hud-card text-accent-cyan"
+                    className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl text-xs font-semibold hud-card text-accent-moss"
                   >
                     <Linkedin size={15} />
                     <span>LinkedIn</span>

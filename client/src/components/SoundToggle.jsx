@@ -17,14 +17,14 @@ export const SoundToggle = ({ className = '' }) => {
       aria-label={soundEnabled ? 'Mute sound' : 'Unmute sound'}
       className={`relative p-2 rounded-xl border transition-all duration-200 flex items-center justify-center ${
         soundEnabled
-          ? 'bg-accent-cyan/15 text-accent-cyan border-accent-cyan/40 shadow-[0_0_10px_rgba(79,209,255,0.25)]'
-          : 'hud-card text-slate-500 dark:text-slate-400 border-slate-200 dark:border-white/10 hover:text-slate-800 dark:hover:text-[#f2f3f8]'
+          ? 'bg-accent-moss/15 text-accent-moss border-accent-moss/40 shadow-[0_0_10px_rgba(122,148,113,0.25)]'
+          : 'hud-card text-slate-500 dark:text-slate-400 border-slate-200 dark:border-white/10 hover:text-slate-800 dark:hover:text-[#EDEDE6]'
       } ${className}`}
     >
       {soundEnabled ? (
         <>
           <Volume2 size={16} />
-          <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-accent-cyan animate-ping" />
+          <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-accent-moss animate-ping" />
         </>
       ) : (
         <VolumeX size={16} />

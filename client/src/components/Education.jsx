@@ -26,49 +26,49 @@ export const Education = () => {
                 className="relative"
               >
                 {/* Timeline node icon */}
-                <div className="absolute -left-[35px] sm:-left-[43px] top-1.5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-md shadow-cyan-500/20">
+                <div className="absolute -left-[35px] sm:-left-[43px] top-1.5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-accent-moss flex items-center justify-center text-white shadow-md shadow-accent-moss/20">
                   <GraduationCap size={16} />
                 </div>
 
                 {/* Left Period Label for desktop */}
                 <div className="hidden sm:block absolute -left-36 top-2 text-right w-24">
-                  <span className="text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-accent-cyan block">
+                  <span className="text-xs font-bold uppercase tracking-wider text-accent-mossDeep dark:text-accent-moss block">
                     {item.scoreType}
                   </span>
-                  <span className="text-xs font-semibold text-slate-900 dark:text-[#f2f3f8] block mt-0.5">
+                  <span className="text-xs font-semibold text-slate-900 dark:text-[#EDEDE6] block mt-0.5">
                     {item.score}
                   </span>
                 </div>
 
                 {/* Content Card */}
-                <div className="hud-card p-6 sm:p-7 rounded-3xl border border-slate-200/80 dark:border-white/10 hover:border-accent-cyan/40 transition-all duration-300">
+                <div className="hud-card p-6 sm:p-7 rounded-3xl border border-slate-200/80 dark:border-white/10 hover:border-accent-moss/40 transition-all duration-300">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-accent-moss/10 text-accent-moss border border-accent-moss/20">
                       <Award size={13} />
                       {item.score}
                     </span>
-                    <span className="text-xs font-medium text-slate-600 dark:text-[#a6adc8] flex items-center gap-1">
+                    <span className="text-xs font-medium text-slate-600 dark:text-[#9AA39A] flex items-center gap-1">
                       <Calendar size={13} />
                       {item.period}
                     </span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                  <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                     {item.degree}
                   </h3>
 
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs sm:text-sm text-slate-600 dark:text-[#a6adc8] font-medium mt-1 mb-3">
-                    <span className="text-slate-900 dark:text-[#f2f3f8] font-semibold flex items-center gap-1.5">
-                      <BookOpen size={14} className="text-accent-cyan" />
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs sm:text-sm text-slate-600 dark:text-[#9AA39A] font-medium mt-1 mb-3">
+                    <span className="text-slate-900 dark:text-[#EDEDE6] font-semibold flex items-center gap-1.5">
+                      <BookOpen size={14} className="text-accent-moss" />
                       {item.institution}
                     </span>
-                    <span className="flex items-center gap-1 text-slate-500 dark:text-[#a6adc8]">
+                    <span className="flex items-center gap-1 text-slate-500 dark:text-[#9AA39A]">
                       <MapPin size={13} />
                       {item.location}
                     </span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-700 dark:text-[#e6e6f0] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-700 dark:text-[#EDEDE6] leading-relaxed">
                     {item.details}
                   </p>
                 </div>

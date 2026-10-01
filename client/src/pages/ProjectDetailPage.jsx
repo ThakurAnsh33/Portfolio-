@@ -125,10 +125,10 @@ export const ProjectDetailPage = () => {
         <div className="w-16 h-16 rounded-2xl bg-rose-500/10 text-rose-500 flex items-center justify-center mx-auto">
           <AlertCircle size={32} />
         </div>
-        <h2 className="text-2xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+        <h2 className="text-2xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
           Project Not Found
         </h2>
-        <p className="text-sm text-slate-600 dark:text-[#a6adc8]">
+        <p className="text-sm text-slate-600 dark:text-[#9AA39A]">
           The project slug "{slug}" does not exist in our architectural records.
         </p>
         <Link to="/projects" className="btn-hud-primary px-5 py-2.5 rounded-xl text-xs font-bold inline-flex items-center gap-2">
@@ -173,32 +173,32 @@ export const ProjectDetailPage = () => {
         
         {/* Breadcrumbs */}
         <div className="flex items-center gap-2 text-xs font-mono text-slate-500 dark:text-slate-400">
-          <Link to="/" className="hover:text-accent-cyan transition-colors">Home</Link>
+          <Link to="/" className="hover:text-accent-moss transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/projects" className="hover:text-accent-cyan transition-colors">Projects</Link>
+          <Link to="/projects" className="hover:text-accent-moss transition-colors">Projects</Link>
           <span>/</span>
-          <span className="text-accent-cyan font-bold">{project.title.split('—')[0].trim()}</span>
+          <span className="text-accent-moss font-bold">{project.title.split('—')[0].trim()}</span>
         </div>
 
         {/* Project Header Banner */}
-        <div className={`p-8 sm:p-12 rounded-3xl hud-card border border-accent-cyan/30 relative overflow-hidden bg-gradient-to-br ${project.gradient}`}>
+        <div className={`p-8 sm:p-12 rounded-3xl hud-card border border-accent-moss/30 relative overflow-hidden bg-gradient-to-br ${project.gradient}`}>
           <div className="absolute inset-0 bg-hud-grid opacity-25" />
           
           <div className="relative z-10 space-y-6">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-black/60 backdrop-blur-md text-white border border-white/20">
-                <Calendar size={13} className="text-accent-cyan" />
+                <Calendar size={13} className="text-accent-moss" />
                 {project.date}
               </span>
 
               {isNerSlap ? (
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-emerald-500 text-[#05060f] shadow-lg shadow-emerald-500/20">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-accent-amber text-[#12161A] shadow-lg shadow-accent-amber/20">
                   <Sparkles size={13} />
                   SIH 2026 Grand Finale Flagship
                 </span>
               ) : (
                 project.featured && (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-accent-cyan text-[#05060f] shadow-sm">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-accent-amber text-[#12161A] shadow-sm">
                     <Sparkles size={12} />
                     Flagship Architecture
                   </span>
@@ -207,7 +207,7 @@ export const ProjectDetailPage = () => {
             </div>
 
             <div>
-              <div className="text-xs uppercase font-mono tracking-wider text-accent-cyan font-bold mb-2">
+              <div className="text-xs uppercase font-mono tracking-wider text-accent-moss font-bold mb-2">
                 {project.subtitle}
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight drop-shadow">
@@ -226,9 +226,9 @@ export const ProjectDetailPage = () => {
                   href={project.liveDemoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-hud-primary px-6 py-3.5 rounded-xl text-sm font-extrabold flex items-center gap-2.5 shadow-hud-glow hover:scale-105 transition-all text-[#05060f]"
+                  className="btn-hud-primary px-6 py-3.5 rounded-xl text-sm font-extrabold flex items-center gap-2.5 shadow-hud-glow hover:scale-105 transition-all text-[#12161A]"
                 >
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#05060f] animate-ping" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#12161A] animate-ping" />
                   <span>Launch Live Demo ({new URL(project.liveDemoUrl).hostname})</span>
                   <ExternalLink size={18} />
                 </a>
@@ -239,7 +239,7 @@ export const ProjectDetailPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleGithubClick}
-                className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-[#05060f]/90 hover:bg-[#0f1120] text-white border border-white/20 flex items-center gap-2 shadow-lg transition-colors"
+                className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-[#12161A]/90 hover:bg-[#1B2127] text-white border border-white/20 flex items-center gap-2 shadow-lg transition-colors"
                 title={project.githubUrl.includes('<your') ? 'Configure your repo URL in portfolioData.js' : 'View source repository'}
               >
                 <Github size={16} />
@@ -261,7 +261,7 @@ export const ProjectDetailPage = () => {
               <Link
                 key={tag}
                 to={`/projects?tech=${encodeURIComponent(tag.toLowerCase())}`}
-                className="px-3 py-1.5 rounded-xl text-xs font-mono font-semibold bg-slate-100 dark:bg-[#14172a] text-slate-800 dark:text-[#f2f3f8] border border-slate-200 dark:border-white/10 hover:border-accent-cyan hover:text-accent-cyan transition-colors"
+                className="px-3 py-1.5 rounded-xl text-xs font-mono font-semibold bg-slate-100 dark:bg-[#222A30] text-slate-800 dark:text-[#EDEDE6] border border-slate-200 dark:border-white/10 hover:border-accent-moss hover:text-accent-moss transition-colors"
                 title={`Find other projects using ${tag}`}
               >
                 {tag}
@@ -276,11 +276,11 @@ export const ProjectDetailPage = () => {
         {isNerSlap && (
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-base font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
-                <Cpu size={18} className="text-emerald-400" />
+              <div className="flex items-center gap-2 text-base font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
+                <Cpu size={18} className="text-accent-moss" />
                 <span>Model Performance &amp; Evaluation Metrics</span>
               </div>
-              <span className="text-xs font-mono text-emerald-400/90 font-semibold">Zero-Runtime Python • Pure TypeScript</span>
+              <span className="text-xs font-mono text-accent-moss font-semibold">Zero-Runtime Python • Pure TypeScript</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -291,10 +291,10 @@ export const ProjectDetailPage = () => {
                     <span>Classifier</span>
                     <span className="px-2 py-0.5 rounded-md bg-rose-500/20 text-rose-300">DecisionTree</span>
                   </div>
-                  <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#f2f3f8] mt-1">
+                  <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#EDEDE6] mt-1">
                     Disruption Alerts
                   </h4>
-                  <p className="text-xs text-slate-600 dark:text-[#a6adc8] mt-1 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-content-muted mt-1 leading-relaxed">
                     Evaluated against multi-district landslide &amp; weather hazards with full confusion matrix &amp; judge demo panel.
                   </p>
                 </div>
@@ -302,65 +302,65 @@ export const ProjectDetailPage = () => {
                 <div className="pt-3 border-t border-rose-500/20 grid grid-cols-2 gap-2">
                   <div>
                     <div className="text-2xl font-extrabold font-heading text-rose-400">85.80%</div>
-                    <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-medium">Test Accuracy</div>
+                    <div className="text-[11px] font-mono text-slate-500 dark:text-content-muted font-medium">Test Accuracy</div>
                   </div>
                   <div>
                     <div className="text-2xl font-extrabold font-heading text-rose-400">0.8600</div>
-                    <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-medium">Precision</div>
+                    <div className="text-[11px] font-mono text-slate-500 dark:text-content-muted font-medium">Precision</div>
                   </div>
                 </div>
               </div>
 
               {/* ETA Regressor */}
-              <div className="p-6 rounded-2xl hud-card border border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent flex flex-col justify-between space-y-4">
+              <div className="p-6 rounded-2xl hud-card border border-accent-moss/30 bg-gradient-to-br from-accent-moss/10 via-transparent to-transparent flex flex-col justify-between space-y-4">
                 <div>
-                  <div className="flex items-center justify-between text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">
+                  <div className="flex items-center justify-between text-xs font-mono text-accent-moss font-bold uppercase tracking-wider">
                     <span>Regressor</span>
-                    <span className="px-2 py-0.5 rounded-md bg-cyan-500/20 text-cyan-300">Continuous Tree</span>
+                    <span className="px-2 py-0.5 rounded-md bg-accent-moss/20 text-accent-moss">Continuous Tree</span>
                   </div>
-                  <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#f2f3f8] mt-1">
+                  <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#EDEDE6] mt-1">
                     ETA Predictor
                   </h4>
-                  <p className="text-xs text-slate-600 dark:text-[#a6adc8] mt-1 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-content-muted mt-1 leading-relaxed">
                     Corridor transit duration forecasting incorporating elevation gradients with 90% confidence bounds.
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-cyan-500/20 grid grid-cols-2 gap-2">
+                <div className="pt-3 border-t border-accent-moss/20 grid grid-cols-2 gap-2">
                   <div>
-                    <div className="text-2xl font-extrabold font-heading text-cyan-400">0.7866</div>
-                    <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-medium">R² Score (Fit)</div>
+                    <div className="text-2xl font-extrabold font-heading text-accent-moss">0.7866</div>
+                    <div className="text-[11px] font-mono text-slate-500 dark:text-content-muted font-medium">R² Score (Fit)</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-extrabold font-heading text-cyan-400">~37 min</div>
-                    <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-medium">MAE</div>
+                    <div className="text-2xl font-extrabold font-heading text-accent-moss">~37 min</div>
+                    <div className="text-[11px] font-mono text-slate-500 dark:text-content-muted font-medium">MAE</div>
                   </div>
                 </div>
               </div>
 
               {/* Cost Regressor */}
-              <div className="p-6 rounded-2xl hud-card border border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent flex flex-col justify-between space-y-4">
+              <div className="p-6 rounded-2xl hud-card border border-accent-mossDeep/30 bg-gradient-to-br from-accent-mossDeep/10 via-transparent to-transparent flex flex-col justify-between space-y-4">
                 <div>
-                  <div className="flex items-center justify-between text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">
+                  <div className="flex items-center justify-between text-xs font-mono text-accent-mossDeep font-bold uppercase tracking-wider">
                     <span>Regressor</span>
-                    <span className="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300">4-Pillar Model</span>
+                    <span className="px-2 py-0.5 rounded-md bg-accent-mossDeep/20 text-accent-mossDeep">4-Pillar Model</span>
                   </div>
-                  <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#f2f3f8] mt-1">
+                  <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-[#EDEDE6] mt-1">
                     Cost Predictor
                   </h4>
-                  <p className="text-xs text-slate-600 dark:text-[#a6adc8] mt-1 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-content-muted mt-1 leading-relaxed">
                     Calculates dynamic freight rates factoring in fuel volatility, elevation change, toll tariffs, and risk premiums.
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-emerald-500/20 grid grid-cols-2 gap-2">
+                <div className="pt-3 border-t border-accent-mossDeep/20 grid grid-cols-2 gap-2">
                   <div>
-                    <div className="text-2xl font-extrabold font-heading text-emerald-400">0.9541</div>
-                    <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-medium">R² Score (Fit)</div>
+                    <div className="text-2xl font-extrabold font-heading text-accent-mossDeep">0.9541</div>
+                    <div className="text-[11px] font-mono text-slate-500 dark:text-content-muted font-medium">R² Score (Fit)</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-extrabold font-heading text-emerald-400">₹2.85/km</div>
-                    <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-medium">MAE</div>
+                    <div className="text-2xl font-extrabold font-heading text-accent-mossDeep">₹2.85/km</div>
+                    <div className="text-[11px] font-mono text-slate-500 dark:text-content-muted font-medium">MAE</div>
                   </div>
                 </div>
               </div>
@@ -373,10 +373,10 @@ export const ProjectDetailPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {project.metrics.map((m, idx) => (
               <div key={idx} className="p-5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 text-center">
-                <div className="text-2xl font-extrabold font-heading text-accent-cyan">
+                <div className="text-2xl font-extrabold font-heading text-accent-moss">
                   {m.value}
                 </div>
-                <div className="text-xs font-semibold text-slate-700 dark:text-[#a6adc8] mt-1 font-mono">
+                <div className="text-xs font-semibold text-slate-700 dark:text-content-muted mt-1 font-mono">
                   {m.label}
                 </div>
               </div>
@@ -388,13 +388,13 @@ export const ProjectDetailPage = () => {
         {/* NER-SLAP SPECIFIC RICH BLOCKS: 3-Layer Architecture Diagram (from README) */}
         {/* ========================================================================= */}
         {isNerSlap && (
-          <div className="p-6 sm:p-8 rounded-3xl hud-card border border-accent-cyan/30 space-y-6">
+          <div className="p-6 sm:p-8 rounded-3xl hud-card border border-accent-moss/30 space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-white/10 pb-4">
-              <div className="flex items-center gap-2.5 text-base sm:text-lg font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
-                <Layers size={20} className="text-accent-cyan" />
+              <div className="flex items-center gap-2.5 text-base sm:text-lg font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
+                <Layers size={20} className="text-accent-moss" />
                 <span>Strict 3-Layer System Architecture</span>
               </div>
-              <span className="text-xs font-mono text-accent-cyan bg-accent-cyan/10 px-3 py-1 rounded-full border border-accent-cyan/20">
+              <span className="text-xs font-mono text-accent-moss bg-accent-moss/10 px-3 py-1 rounded-full border border-accent-moss/20">
                 Production Tested • Zero-Downtime Live Demos
               </span>
             </div>
@@ -403,64 +403,64 @@ export const ProjectDetailPage = () => {
             <div className="space-y-4">
               
               {/* Layer 1: Frontend */}
-              <div className="p-5 rounded-2xl bg-slate-100/90 dark:bg-[#0f1120] border border-cyan-500/30 relative">
+              <div className="p-5 rounded-2xl bg-slate-100/90 dark:bg-[#1B2127] border border-accent-moss/30 relative">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+                  <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider bg-accent-moss/20 text-accent-moss border border-accent-moss/30">
                     Layer 1: Frontend Presentation &amp; GIS Map Interface
                   </span>
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                  <span className="text-xs font-mono text-slate-500 dark:text-content-muted">
                     React 18 • TypeScript • Leaflet.js • Recharts
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-700 dark:text-[#e6e6f0] leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-[#EDEDE6] leading-relaxed">
                   Renders 8 integrated operational modules, interactive corridor maps with route polylines, 6-pillar LAS radar charts, and mathematical Bézier-curve offline routing fallbacks when external routing tiles are unavailable.
                 </p>
               </div>
 
               {/* Downward Connector */}
-              <div className="flex items-center justify-center gap-3 text-xs font-mono text-accent-cyan py-1">
-                <span className="h-4 w-px bg-accent-cyan/40" />
-                <span className="px-2 py-0.5 rounded-full bg-accent-cyan/10 border border-accent-cyan/20 text-[10px]">
+              <div className="flex items-center justify-center gap-3 text-xs font-mono text-accent-moss py-1">
+                <span className="h-4 w-px bg-accent-moss/40" />
+                <span className="px-2 py-0.5 rounded-full bg-accent-moss/10 border border-accent-moss/20 text-[10px]">
                   HTTP / REST API Requests &amp; Geocoding Inquiries ↓
                 </span>
-                <span className="h-4 w-px bg-accent-cyan/40" />
+                <span className="h-4 w-px bg-accent-moss/40" />
               </div>
 
               {/* Layer 2: Express Routes */}
-              <div className="p-5 rounded-2xl bg-slate-100/90 dark:bg-[#0f1120] border border-teal-500/30 relative">
+              <div className="p-5 rounded-2xl bg-slate-100/90 dark:bg-[#1B2127] border border-accent-mossDeep/30 relative">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider bg-teal-500/20 text-teal-400 border border-teal-500/30">
+                  <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider bg-accent-mossDeep/20 text-accent-mossDeep border border-accent-mossDeep/30">
                     Layer 2: Express Routes &amp; Gateway Dispatcher
                   </span>
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                  <span className="text-xs font-mono text-slate-500 dark:text-content-muted">
                     Node.js • Express.js REST APIs • Middleware Guard
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-700 dark:text-[#e6e6f0] leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-[#EDEDE6] leading-relaxed">
                   Orchestrates live external API calls (OSRM routing, Open-Meteo weather, Nominatim geocoding, Overpass OSM data), enforces cold-chain transport matching rules, handles request sanitization, and routes fallback queries.
                 </p>
               </div>
 
               {/* Downward Connector */}
-              <div className="flex items-center justify-center gap-3 text-xs font-mono text-emerald-400 py-1">
-                <span className="h-4 w-px bg-emerald-500/40" />
-                <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px]">
+              <div className="flex items-center justify-center gap-3 text-xs font-mono text-accent-mossDeep py-1">
+                <span className="h-4 w-px bg-accent-mossDeep/40" />
+                <span className="px-2 py-0.5 rounded-full bg-accent-mossDeep/10 border border-accent-mossDeep/20 text-[10px]">
                   In-Memory Inference (&lt;0.05ms) &amp; 15-Min SQLite Cache ↓
                 </span>
-                <span className="h-4 w-px bg-emerald-500/40" />
+                <span className="h-4 w-px bg-accent-mossDeep/40" />
               </div>
 
               {/* Layer 3: Cache / Proxy + ML Decision Trees */}
-              <div className="p-5 rounded-2xl bg-slate-100/90 dark:bg-[#0f1120] border border-emerald-500/30 relative">
+              <div className="p-5 rounded-2xl bg-slate-100/90 dark:bg-[#1B2127] border border-accent-moss/30 relative">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider bg-accent-moss/20 text-accent-moss border border-accent-moss/30">
                     Layer 3: Cache/Proxy &amp; Pure-TS ML Decision Trees
                   </span>
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                  <span className="text-xs font-mono text-slate-500 dark:text-content-muted">
                     SQLite3 (15-min TTL) • Pure TypeScript ML AST • Offline Dataset
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-700 dark:text-[#e6e6f0] leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-[#EDEDE6] leading-relaxed">
                   Houses zero-runtime-Python ML inference (scikit-learn decision trees exported directly into pure TypeScript ASTs for &lt;0.05ms execution), a 15-minute SQLite caching proxy eliminating API rate limits, and an embedded 35-hub / 60-POI offline fallback dataset.
                 </p>
               </div>
@@ -475,11 +475,11 @@ export const ProjectDetailPage = () => {
         {isNerSlap && (
           <div className="p-6 sm:p-8 rounded-3xl hud-card border border-slate-200 dark:border-white/10 space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-white/10 pb-4">
-              <div className="flex items-center gap-2.5 text-base sm:text-lg font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
-                <Activity size={20} className="text-accent-cyan" />
+              <div className="flex items-center gap-2.5 text-base sm:text-lg font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
+                <Activity size={20} className="text-accent-moss" />
                 <span>8 Integrated Operational Modules</span>
               </div>
-              <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+              <span className="text-xs font-mono text-slate-500 dark:text-content-muted">
                 Compact Module Overview • Single Pane of Glass
               </span>
             </div>
@@ -497,12 +497,12 @@ export const ProjectDetailPage = () => {
                     </div>
                     <div className="min-w-0">
                       <div className="flex items-center gap-2">
-                        <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 font-bold">{mod.num}.</span>
-                        <h5 className="text-xs sm:text-sm font-bold font-heading text-slate-900 dark:text-[#f2f3f8] truncate">
+                        <span className="text-[10px] font-mono text-slate-500 dark:text-content-muted font-bold">{mod.num}.</span>
+                        <h5 className="text-xs sm:text-sm font-bold font-heading text-slate-900 dark:text-[#EDEDE6] truncate">
                           {mod.name}
                         </h5>
                       </div>
-                      <p className="text-xs text-slate-600 dark:text-[#a6adc8] leading-relaxed mt-0.5">
+                      <p className="text-xs text-slate-600 dark:text-content-muted leading-relaxed mt-0.5">
                         {mod.desc}
                       </p>
                     </div>
@@ -520,7 +520,7 @@ export const ProjectDetailPage = () => {
               <AlertCircle size={20} />
               <span>Problem Statement</span>
             </div>
-            <p className="text-sm text-slate-700 dark:text-[#e6e6f0] leading-relaxed">
+            <p className="text-sm text-slate-700 dark:text-[#EDEDE6] leading-relaxed">
               {project.problem || "Addressing scalability bottlenecks, race conditions in simultaneous user mutations, and latency spikes across distributed web services."}
             </p>
           </div>
@@ -530,7 +530,7 @@ export const ProjectDetailPage = () => {
               <CheckCircle2 size={20} />
               <span>Architectural Solution</span>
             </div>
-            <p className="text-sm text-slate-700 dark:text-[#e6e6f0] leading-relaxed">
+            <p className="text-sm text-slate-700 dark:text-[#EDEDE6] leading-relaxed">
               {project.solution || "Implemented an event-driven architecture with atomic MongoDB queries, structured REST endpoints, and reactive client components."}
             </p>
           </div>
@@ -539,17 +539,17 @@ export const ProjectDetailPage = () => {
         {/* Standard Architecture Specifications (for non-NER-SLAP projects) */}
         {!isNerSlap && project.architecture && (
           <div className="p-6 sm:p-8 rounded-3xl hud-card border border-slate-200 dark:border-white/10 space-y-4">
-            <div className="flex items-center gap-2.5 text-base font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
-              <Layers size={18} className="text-accent-cyan" />
+            <div className="flex items-center gap-2.5 text-base font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
+              <Layers size={18} className="text-accent-moss" />
               <span>Full-Stack Architecture Layers</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {Object.entries(project.architecture).map(([layer, desc]) => (
-                <div key={layer} className="p-4 rounded-xl bg-slate-100/80 dark:bg-[#0f1120] border border-slate-200 dark:border-white/5 space-y-1">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-accent-cyan">
+                <div key={layer} className="p-4 rounded-xl bg-slate-100/80 dark:bg-[#1B2127] border border-slate-200 dark:border-white/5 space-y-1">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-accent-moss">
                     {layer}:
                   </span>
-                  <p className="text-xs text-slate-700 dark:text-[#a6adc8] leading-relaxed">
+                  <p className="text-xs text-slate-700 dark:text-content-muted leading-relaxed">
                     {desc}
                   </p>
                 </div>
@@ -560,14 +560,14 @@ export const ProjectDetailPage = () => {
 
         {/* Key Features List */}
         <div className="p-6 sm:p-8 rounded-3xl hud-card border border-slate-200 dark:border-white/10 space-y-4">
-          <div className="flex items-center gap-2.5 text-base font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
-            <Cpu size={18} className="text-accent-cyan" />
+          <div className="flex items-center gap-2.5 text-base font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
+            <Cpu size={18} className="text-accent-moss" />
             <span>Implemented Engineering Highlights &amp; User Stories</span>
           </div>
           <div className="space-y-3 pt-2">
             {project.features.map((feat, fIdx) => (
-              <div key={fIdx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-[#e6e6f0] leading-relaxed">
-                <CheckCircle2 size={16} className="text-accent-cyan shrink-0 mt-0.5" />
+              <div key={fIdx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-[#EDEDE6] leading-relaxed">
+                <CheckCircle2 size={16} className="text-accent-moss shrink-0 mt-0.5" />
                 <span>{feat}</span>
               </div>
             ))}
@@ -576,30 +576,30 @@ export const ProjectDetailPage = () => {
 
         {/* Syntax-Highlighted Code Snippet Preview */}
         {project.codeSnippet && (
-          <div className="rounded-3xl hud-card border border-accent-cyan/30 overflow-hidden bg-[#05060f] shadow-2xl">
+          <div className="rounded-3xl hud-card border border-accent-moss/30 overflow-hidden bg-[#12161A] shadow-2xl">
             {/* Terminal Window Top Bar */}
-            <div className="flex items-center justify-between px-5 py-3.5 bg-[#0f1120] border-b border-white/10">
+            <div className="flex items-center justify-between px-5 py-3.5 bg-[#1B2127] border-b border-white/10">
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-1.5">
                   <span className="w-3 h-3 rounded-full bg-rose-500/80" />
-                  <span className="w-3 h-3 rounded-full bg-amber-500/80" />
-                  <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
+                  <span className="w-3 h-3 rounded-full bg-accent-amber/80" />
+                  <span className="w-3 h-3 rounded-full bg-accent-moss/80" />
                 </div>
-                <span className="text-xs font-mono text-slate-400 flex items-center gap-1.5 truncate max-w-sm sm:max-w-md">
-                  <Code2 size={14} className="text-accent-cyan shrink-0" />
+                <span className="text-xs font-mono text-content-muted flex items-center gap-1.5 truncate max-w-sm sm:max-w-md">
+                  <Code2 size={14} className="text-accent-moss shrink-0" />
                   <span className="truncate">{project.codeSnippet.title}</span>
                 </span>
               </div>
 
               <button
                 onClick={() => handleCopyCode(project.codeSnippet.code)}
-                className="px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white/10 hover:bg-white/20 text-slate-200 hover:text-accent-cyan border border-white/10 flex items-center gap-1.5 transition-colors shrink-0"
+                className="px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white/10 hover:bg-white/20 text-slate-200 hover:text-accent-moss border border-white/10 flex items-center gap-1.5 transition-colors shrink-0"
                 title="Copy snippet"
               >
                 {copied ? (
                   <>
-                    <Check size={14} className="text-emerald-400" />
-                    <span className="text-emerald-400">Copied!</span>
+                    <Check size={14} className="text-accent-moss" />
+                    <span className="text-accent-moss">Copied!</span>
                   </>
                 ) : (
                   <>
@@ -611,7 +611,7 @@ export const ProjectDetailPage = () => {
             </div>
 
             {/* Code Body */}
-            <div className="p-6 overflow-x-auto text-xs sm:text-sm font-mono leading-relaxed text-[#f2f3f8] bg-[#05060f]/95 selection:bg-accent-cyan selection:text-black">
+            <div className="p-6 overflow-x-auto text-xs sm:text-sm font-mono leading-relaxed text-[#EDEDE6] bg-[#12161A]/95 selection:bg-accent-moss selection:text-[#12161A]">
               <pre className="line-numbers">
                 <code>{project.codeSnippet.code}</code>
               </pre>
@@ -624,12 +624,12 @@ export const ProjectDetailPage = () => {
           {prevProject ? (
             <Link
               to={`/projects/${prevProject.id}`}
-              className="w-full sm:w-auto p-4 rounded-2xl hud-card border border-slate-200 dark:border-white/10 hover:border-accent-cyan flex items-center gap-3 text-left transition-colors group"
+              className="w-full sm:w-auto p-4 rounded-2xl hud-card border border-slate-200 dark:border-white/10 hover:border-accent-moss flex items-center gap-3 text-left transition-colors group"
             >
-              <ArrowLeft size={18} className="text-accent-cyan group-hover:-translate-x-1 transition-transform shrink-0" />
+              <ArrowLeft size={18} className="text-accent-moss group-hover:-translate-x-1 transition-transform shrink-0" />
               <div>
                 <div className="text-[10px] font-mono text-slate-400 uppercase">Previous Project</div>
-                <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#f2f3f8]">
+                <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#EDEDE6]">
                   {prevProject.title.split('—')[0]}
                 </div>
               </div>
@@ -638,7 +638,7 @@ export const ProjectDetailPage = () => {
 
           <Link
             to="/projects"
-            className="text-xs font-mono font-bold text-accent-cyan hover:underline py-2"
+            className="text-xs font-mono font-bold text-accent-moss hover:underline py-2"
           >
             • Back to All Projects •
           </Link>
@@ -646,15 +646,15 @@ export const ProjectDetailPage = () => {
           {nextProject ? (
             <Link
               to={`/projects/${nextProject.id}`}
-              className="w-full sm:w-auto p-4 rounded-2xl hud-card border border-slate-200 dark:border-white/10 hover:border-accent-cyan flex items-center gap-3 text-right justify-end transition-colors group"
+              className="w-full sm:w-auto p-4 rounded-2xl hud-card border border-slate-200 dark:border-white/10 hover:border-accent-moss flex items-center gap-3 text-right justify-end transition-colors group"
             >
               <div>
                 <div className="text-[10px] font-mono text-slate-400 uppercase">Next Project</div>
-                <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#f2f3f8]">
+                <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#EDEDE6]">
                   {nextProject.title.split('—')[0]}
                 </div>
               </div>
-              <ArrowRight size={18} className="text-accent-cyan group-hover:translate-x-1 transition-transform shrink-0" />
+              <ArrowRight size={18} className="text-accent-moss group-hover:translate-x-1 transition-transform shrink-0" />
             </Link>
           ) : <div />}
         </div>

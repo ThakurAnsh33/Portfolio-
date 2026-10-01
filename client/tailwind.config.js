@@ -6,45 +6,50 @@ export default {
     extend: {
       colors: {
         hud: {
-          bg: '#05060f',
-          card: 'rgba(15, 17, 32, 0.78)',
-          'card-hover': 'rgba(20, 24, 46, 0.85)',
-          surface: '#0f1120',
-          elevated: '#171a30',
-          border: 'rgba(79, 209, 255, 0.16)',
-          'border-active': 'rgba(167, 139, 250, 0.45)',
-          'border-subtle': 'rgba(255, 255, 255, 0.08)',
+          bg: '#12161A',
+          card: 'rgba(27, 33, 39, 0.78)',
+          'card-hover': 'rgba(33, 40, 46, 0.88)',
+          surface: '#1B2127',
+          elevated: '#222A30',
+          border: 'rgba(154, 163, 154, 0.14)',
+          'border-active': 'rgba(122, 148, 113, 0.45)',
+          'border-subtle': 'rgba(237, 237, 230, 0.08)',
         },
         dark: {
-          950: '#05060f',
-          900: '#0f1120',
-          850: '#14172a',
-          800: '#171a30',
-          700: '#1e233d',
-          600: '#2c3352',
+          950: '#12161A',
+          900: '#1B2127',
+          850: '#222A30',
+          800: '#2A343C',
+          700: '#34404A',
+          600: '#465563',
         },
         light: {
-          bg: '#f7f8fc',
-          card: 'rgba(255, 255, 255, 0.90)',
+          bg: '#F4F4EE',
+          card: 'rgba(255, 255, 255, 0.88)',
           'card-hover': 'rgba(255, 255, 255, 0.98)',
-          surface: '#ffffff',
-          elevated: '#f0f2fa',
-          border: 'rgba(79, 209, 255, 0.28)',
-          text: '#0b0d1a',
-          muted: '#4b5563',
+          surface: '#EAEAE2',
+          elevated: '#DFE2D8',
+          border: 'rgba(85, 96, 79, 0.20)',
+          text: '#14181C',
+          muted: '#55604F',
         },
         // Strict high-contrast color tokens
         content: {
-          primary: '#f2f3f8',   // Off-white for all dark mode text & headings
-          muted: '#a6adc8',     // Light gray-blue for secondary metadata
-          lightPrimary: '#0b0d1a', // Dark navy for light mode text & headings
-          lightMuted: '#4b5563',   // Muted gray for light mode captions
+          primary: '#EDEDE6',   // Off-white for all dark mode text & headings
+          muted: '#9AA39A',     // Light muted tone for secondary metadata
+          lightPrimary: '#14181C', // Deep tone for light mode text & headings
+          lightMuted: '#55604F',   // Muted stone for light mode captions
         },
         accent: {
-          cyan: '#4fd1ff',
-          violet: '#a78bfa',
-          blue: '#3b82f6',
-          purple: '#8b5cf6',
+          moss: '#7A9471',
+          mossDeep: '#5C7054',
+          amber: '#D9A85C',
+          amberDeep: '#B5833C',
+          // Backwards compatibility aliases to ensure smooth migration
+          cyan: '#7A9471',
+          violet: '#5C7054',
+          blue: '#7A9471',
+          purple: '#5C7054',
         },
       },
       fontFamily: {
@@ -72,10 +77,10 @@ export default {
         },
       },
       boxShadow: {
-        'hud-card': '0 12px 36px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08)',
-        'hud-glow': '0 0 25px -4px rgba(79, 209, 255, 0.35)',
-        'hud-glow-lg': '0 0 45px -8px rgba(167, 139, 250, 0.4)',
-        'btn-glow': '0 0 20px -3px rgba(79, 209, 255, 0.45)',
+        'hud-card': '0 12px 36px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(237, 237, 230, 0.08)',
+        'hud-glow': '0 0 20px -4px rgba(122, 148, 113, 0.25)',
+        'hud-glow-lg': '0 0 35px -6px rgba(122, 148, 113, 0.3)',
+        'btn-glow': '0 0 20px -3px rgba(122, 148, 113, 0.35)',
       },
     },
   },

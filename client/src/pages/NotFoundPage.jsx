@@ -13,7 +13,7 @@ export const NotFoundPage = () => {
         description="The requested route does not exist in memory buffer."
       />
 
-      <div className="max-w-xl w-full p-8 sm:p-10 rounded-3xl hud-card border border-rose-500/40 dark:bg-[#05060f]/95 bg-white/95 shadow-2xl relative overflow-hidden space-y-6 text-center font-mono">
+      <div className="max-w-xl w-full p-8 sm:p-10 rounded-3xl hud-card border border-rose-500/40 dark:bg-[#12161A]/95 bg-white/95 shadow-2xl relative overflow-hidden space-y-6 text-center font-mono">
         {/* Glow */}
         <div className="absolute top-0 right-1/4 w-48 h-48 bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -43,9 +43,9 @@ export const NotFoundPage = () => {
         </div>
 
         {/* Suggested Routes Box */}
-        <div className="p-4 rounded-xl dark:bg-[#0f1120] bg-slate-50 border border-slate-200 dark:border-white/5 text-left text-xs space-y-2 text-slate-700 dark:text-slate-300">
+        <div className="p-4 rounded-xl dark:bg-[#1B2127] bg-slate-50 border border-slate-200 dark:border-white/5 text-left text-xs space-y-2 text-slate-700 dark:text-slate-300">
           <div className="text-slate-500 dark:text-slate-400"># Suggested reachable segments:</div>
-          <div className="grid grid-cols-2 gap-2 text-accent-cyan">
+          <div className="grid grid-cols-2 gap-2 text-accent-moss">
             <Link to="/" className="hover:underline flex items-center gap-1">
               <span>▸ cd /</span> <span className="text-slate-500 dark:text-slate-400">(Home)</span>
             </Link>

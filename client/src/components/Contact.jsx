@@ -82,7 +82,7 @@ export const Contact = () => {
       const count = 100;
       const confettiConfig = {
         origin: { y: 0.7 },
-        colors: ['#4fd1ff', '#a78bfa', '#3b82f6', '#10b981', '#f2f3f8'],
+        colors: ['#7A9471', '#5C7054', '#D9A85C', '#EDEDE6', '#B5833C'],
         disableForReducedMotion: true,
       };
       const fire = (ratio, opts) => {
@@ -129,10 +129,10 @@ export const Contact = () => {
             className="lg:col-span-5 space-y-6"
           >
             <div className="hud-card p-8 rounded-3xl border border-slate-200/80 dark:border-white/10">
-              <h3 className="text-2xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8] mb-2">
+              <h3 className="text-2xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6] mb-2">
                 Let's discuss your team's next engineering milestone.
               </h3>
-              <p className="text-sm text-slate-600 dark:text-[#a6adc8] mb-8 leading-relaxed">
+              <p className="text-sm text-slate-600 dark:text-[#9AA39A] mb-8 leading-relaxed">
                 Whether you have an opening for a Full Stack MERN Developer, a campus placement query, or a freelance project, I'd love to connect.
               </p>
 
@@ -141,16 +141,16 @@ export const Contact = () => {
                 {/* Email */}
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="group flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#14172a] border border-slate-200 dark:border-white/10 hover:border-accent-cyan/50 transition-all duration-200"
+                  className="group flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#222A30] border border-slate-200 dark:border-white/10 hover:border-accent-moss/50 transition-all duration-200"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-blue-500/10 text-brand-blue flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <div className="w-11 h-11 rounded-xl bg-accent-moss/10 text-accent-moss flex items-center justify-center group-hover:scale-105 transition-transform">
                     <Mail size={20} />
                   </div>
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#a6adc8] block">
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#9AA39A] block">
                       Email Address
                     </span>
-                    <span className="text-sm font-semibold text-slate-900 dark:text-[#f2f3f8] group-hover:text-accent-cyan transition-colors">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-[#EDEDE6] group-hover:text-accent-moss transition-colors">
                       {personalInfo.email}
                     </span>
                   </div>
@@ -159,16 +159,16 @@ export const Contact = () => {
                 {/* Phone */}
                 <a
                   href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`}
-                  className="group flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#14172a] border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 transition-all duration-200"
+                  className="group flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#222A30] border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 transition-all duration-200"
                 >
                   <div className="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center group-hover:scale-105 transition-transform">
                     <Phone size={20} />
                   </div>
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#a6adc8] block">
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#9AA39A] block">
                       Phone / WhatsApp
                     </span>
-                    <span className="text-sm font-semibold text-slate-900 dark:text-[#f2f3f8] group-hover:text-emerald-500 transition-colors">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-[#EDEDE6] group-hover:text-emerald-500 transition-colors">
                       {personalInfo.phone}
                     </span>
                   </div>
@@ -179,16 +179,16 @@ export const Contact = () => {
                   href={personalInfo.linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#14172a] border border-slate-200 dark:border-white/10 hover:border-accent-cyan/50 transition-all duration-200"
+                  className="group flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#222A30] border border-slate-200 dark:border-white/10 hover:border-accent-moss/50 transition-all duration-200"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-blue-600/10 text-blue-500 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <div className="w-11 h-11 rounded-xl bg-accent-moss/10 text-accent-moss flex items-center justify-center group-hover:scale-105 transition-transform">
                     <Linkedin size={20} />
                   </div>
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#a6adc8] block">
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#9AA39A] block">
                       LinkedIn
                     </span>
-                    <span className="text-sm font-semibold text-slate-900 dark:text-[#f2f3f8] group-hover:text-accent-cyan transition-colors">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-[#EDEDE6] group-hover:text-accent-moss transition-colors">
                       linkedin.com/in/thakuransh
                     </span>
                   </div>
@@ -199,31 +199,31 @@ export const Contact = () => {
                   href={personalInfo.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#14172a] border border-slate-200 dark:border-white/10 hover:border-accent-cyan/50 transition-all duration-200"
+                  className="group flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#222A30] border border-slate-200 dark:border-white/10 hover:border-accent-moss/50 transition-all duration-200"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-violet-500/10 text-violet-500 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <div className="w-11 h-11 rounded-xl bg-accent-mossDeep/15 text-accent-moss flex items-center justify-center group-hover:scale-105 transition-transform">
                     <Github size={20} />
                   </div>
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#a6adc8] block">
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#9AA39A] block">
                       GitHub
                     </span>
-                    <span className="text-sm font-semibold text-slate-900 dark:text-[#f2f3f8] group-hover:text-accent-cyan transition-colors">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-[#EDEDE6] group-hover:text-accent-moss transition-colors">
                       github.com/ThakurAnsh33
                     </span>
                   </div>
                 </a>
 
                 {/* Location */}
-                <div className="flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#14172a] border border-slate-200 dark:border-white/10">
-                  <div className="w-11 h-11 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center">
+                <div className="flex items-center gap-4 p-3.5 rounded-2xl bg-slate-100 dark:bg-[#222A30] border border-slate-200 dark:border-white/10">
+                  <div className="w-11 h-11 rounded-xl bg-accent-moss/10 text-accent-moss flex items-center justify-center">
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#a6adc8] block">
+                    <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-500 dark:text-[#9AA39A] block">
                       Location
                     </span>
-                    <span className="text-sm font-semibold text-slate-900 dark:text-[#f2f3f8]">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-[#EDEDE6]">
                       {personalInfo.location}
                     </span>
                   </div>
@@ -248,14 +248,14 @@ export const Contact = () => {
             <div className="hud-card p-8 sm:p-10 rounded-3xl border border-slate-200/80 dark:border-white/10 relative">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                     Send a Message
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-[#a6adc8] mt-0.5">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-[#9AA39A] mt-0.5">
                     Messages are delivered directly to the MongoDB backend & email notification service.
                   </p>
                 </div>
-                <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600/15 to-violet-600/15 text-accent-cyan flex items-center justify-center">
+                <div className="w-10 h-10 rounded-2xl bg-accent-moss/10 text-accent-moss border border-accent-moss/20 flex items-center justify-center">
                   <MessageSquare size={20} />
                 </div>
               </div>
@@ -265,10 +265,10 @@ export const Contact = () => {
                   <div className="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 flex items-center justify-center mx-auto">
                     <CheckCircle2 size={32} />
                   </div>
-                  <h4 className="text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                  <h4 className="text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                     Message Sent Successfully!
                   </h4>
-                  <p className="text-sm text-slate-600 dark:text-[#a6adc8] max-w-sm mx-auto">
+                  <p className="text-sm text-slate-600 dark:text-[#9AA39A] max-w-sm mx-auto">
                     Thank you for reaching out. Your message has been saved in the database, and Ansh will review it shortly.
                   </p>
                   <button
@@ -286,7 +286,7 @@ export const Contact = () => {
                     <div className="flex items-center justify-between mb-2">
                       <label
                         htmlFor="name"
-                        className="block text-xs font-semibold uppercase tracking-wider text-slate-800 dark:text-[#e6e6f0]"
+                        className="block text-xs font-semibold uppercase tracking-wider text-slate-800 dark:text-[#EDEDE6]"
                       >
                         Your Name <span className="text-rose-500">*</span>
                       </label>
@@ -311,10 +311,10 @@ export const Contact = () => {
                       onBlur={() => handleBlur('name')}
                       placeholder="e.g. Rahul Sharma"
                       required
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#14172a] border text-[#0b0d1a] dark:text-[#f2f3f8] placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:ring-2 transition-all ${
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#222A30] border text-[#14181C] dark:text-[#EDEDE6] placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:ring-2 transition-all ${
                         touched.name && !isNameValid
                           ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500/20'
-                          : 'border-slate-300 dark:border-white/15 focus:border-accent-cyan focus:ring-accent-cyan/20'
+                          : 'border-slate-300 dark:border-white/15 focus:border-accent-moss focus:ring-accent-moss/20'
                       }`}
                     />
                   </div>
@@ -324,7 +324,7 @@ export const Contact = () => {
                     <div className="flex items-center justify-between mb-2">
                       <label
                         htmlFor="email"
-                        className="block text-xs font-semibold uppercase tracking-wider text-slate-800 dark:text-[#e6e6f0]"
+                        className="block text-xs font-semibold uppercase tracking-wider text-slate-800 dark:text-[#EDEDE6]"
                       >
                         Email Address <span className="text-rose-500">*</span>
                       </label>
@@ -349,10 +349,10 @@ export const Contact = () => {
                       onBlur={() => handleBlur('email')}
                       placeholder="e.g. recruiter@company.com"
                       required
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#14172a] border text-[#0b0d1a] dark:text-[#f2f3f8] placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:ring-2 transition-all ${
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#222A30] border text-[#14181C] dark:text-[#EDEDE6] placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:ring-2 transition-all ${
                         touched.email && !isEmailValid
                           ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500/20'
-                          : 'border-slate-300 dark:border-white/15 focus:border-accent-cyan focus:ring-accent-cyan/20'
+                          : 'border-slate-300 dark:border-white/15 focus:border-accent-moss focus:ring-accent-moss/20'
                       }`}
                     />
                   </div>
@@ -362,14 +362,14 @@ export const Contact = () => {
                     <div className="flex items-center justify-between mb-2">
                       <label
                         htmlFor="message"
-                        className="block text-xs font-semibold uppercase tracking-wider text-slate-800 dark:text-[#e6e6f0]"
+                        className="block text-xs font-semibold uppercase tracking-wider text-slate-800 dark:text-[#EDEDE6]"
                       >
                         Message <span className="text-rose-500">*</span>
                       </label>
                       <span
                         className={`text-[11px] font-mono ${
                           formData.message.length >= 5
-                            ? 'text-accent-cyan font-medium'
+                            ? 'text-accent-moss font-medium'
                             : 'text-slate-400'
                         }`}
                       >
@@ -386,10 +386,10 @@ export const Contact = () => {
                       onBlur={() => handleBlur('message')}
                       placeholder="Write your message, project details, or interview invitation..."
                       required
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#14172a] border text-[#0b0d1a] dark:text-[#f2f3f8] placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:ring-2 transition-all resize-none ${
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-[#222A30] border text-[#14181C] dark:text-[#EDEDE6] placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:ring-2 transition-all resize-none ${
                         touched.message && !isMessageValid
                           ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500/20'
-                          : 'border-slate-300 dark:border-white/15 focus:border-accent-cyan focus:ring-accent-cyan/20'
+                          : 'border-slate-300 dark:border-white/15 focus:border-accent-moss focus:ring-accent-moss/20'
                       }`}
                     ></textarea>
                   </div>
@@ -413,7 +413,7 @@ export const Contact = () => {
                     )}
                   </button>
 
-                  <p className="text-[11px] text-center text-slate-500 dark:text-[#a6adc8]">
+                  <p className="text-[11px] text-center text-slate-500 dark:text-[#9AA39A]">
                     🔒 Secured with Express rate limiting & Mongoose database validation.
                   </p>
                 </form>

@@ -60,48 +60,48 @@ export const AboutPage = () => {
                 {/* Profile Portrait Header */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 pb-5 border-b border-slate-200 dark:border-white/10">
                   <div className="relative group shrink-0">
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-[2px] bg-gradient-to-tr from-accent-cyan via-accent-violet to-emerald-400 shadow-hud-glow overflow-hidden">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-[2px] bg-gradient-to-tr from-accent-moss via-accent-mossDeep to-accent-amber shadow-hud-glow overflow-hidden">
                       <img
                         src={personalInfo.profileImage || "/profile.png"}
                         alt={personalInfo.name}
                         className="w-full h-full object-cover object-top rounded-[14px] transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
-                    <span className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500 text-[#05060f] shadow-md flex items-center gap-1 border border-white dark:border-[#05060f]">
+                    <span className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-accent-amber text-[#12161A] shadow-md flex items-center gap-1 border border-white dark:border-[#12161A]">
                       <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
                       ACTIVE
                     </span>
                   </div>
 
                   <div className="space-y-1.5 text-center sm:text-left min-w-0">
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/25">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-accent-moss/10 text-accent-moss border border-accent-moss/25">
                       <Sparkles size={11} />
                       <span>Software Engineer &amp; Full Stack MERN</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                    <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                       Ansh Singh
                     </h3>
-                    <p className="text-xs text-slate-600 dark:text-[#a6adc8]">
+                    <p className="text-xs text-slate-600 dark:text-content-muted">
                       Lovely Professional University • B.Tech CSE (CGPA 8.3)
                     </p>
                     <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-1 text-xs text-slate-500 font-mono">
                       <span className="flex items-center gap-1">
-                        <MapPin size={12} className="text-accent-violet" />
+                        <MapPin size={12} className="text-accent-mossDeep" />
                         <span>Punjab, India</span>
                       </span>
                       <span>•</span>
-                      <span className="text-emerald-500 font-semibold">Available for Roles</span>
+                      <span className="text-accent-moss font-semibold">Available for Roles</span>
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                   Full-Stack MERN Engineer based in Punjab, India
                 </h3>
-                <p className="text-sm sm:text-base text-slate-700 dark:text-[#a6adc8] leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-700 dark:text-content-muted leading-relaxed">
                   {personalInfo.bioDetailed}
                 </p>
-                <p className="text-sm sm:text-base text-slate-700 dark:text-[#a6adc8] leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-700 dark:text-content-muted leading-relaxed">
                   My journey began with strong foundations in C++ and Java object-oriented design, expanding rapidly into distributed web applications, asynchronous Node.js microservices, and reactive React.js state architectures. I enjoy solving algorithmic bottlenecks and transforming complex system requirements into seamless user experiences.
                 </p>
 
@@ -120,7 +120,7 @@ export const AboutPage = () => {
                     href={personalInfo.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold hud-card text-slate-700 dark:text-[#f2f3f8] hover:text-accent-cyan border border-slate-200 dark:border-white/10 flex items-center gap-1.5 transition-colors"
+                    className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold hud-card text-slate-700 dark:text-[#EDEDE6] hover:text-accent-moss border border-slate-200 dark:border-white/10 flex items-center gap-1.5 transition-colors"
                   >
                     <span>Connect on LinkedIn</span>
                     <ExternalLink size={14} />
@@ -136,15 +136,15 @@ export const AboutPage = () => {
                 return (
                   <div
                     key={idx}
-                    className="p-5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 space-y-2 hover:border-accent-cyan/40 transition-colors"
+                    className="p-5 rounded-2xl hud-card border border-slate-200 dark:border-white/10 space-y-2 hover:border-accent-moss/40 transition-colors"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-accent-cyan/10 text-accent-cyan flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-accent-moss/10 text-accent-moss flex items-center justify-center">
                       <IconComp size={20} />
                     </div>
-                    <h4 className="font-heading font-bold text-sm text-slate-900 dark:text-[#f2f3f8]">
+                    <h4 className="font-heading font-bold text-sm text-slate-900 dark:text-[#EDEDE6]">
                       {st.title}
                     </h4>
-                    <p className="text-xs text-slate-600 dark:text-[#a6adc8] leading-relaxed">
+                    <p className="text-xs text-slate-600 dark:text-content-muted leading-relaxed">
                       {st.description}
                     </p>
                   </div>
@@ -174,30 +174,30 @@ export const AboutPage = () => {
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-white/10">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-2xl bg-accent-cyan/10 text-accent-cyan flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-accent-moss/10 text-accent-moss flex items-center justify-center shrink-0">
                       <GraduationCap size={24} />
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                      <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                         {edu.degree}
                       </h3>
-                      <div className="text-xs sm:text-sm text-slate-600 dark:text-[#a6adc8] font-medium">
-                        {edu.institution} · <span className="text-accent-cyan">{edu.location}</span>
+                      <div className="text-xs sm:text-sm text-slate-600 dark:text-content-muted font-medium">
+                        {edu.institution} · <span className="text-accent-moss">{edu.location}</span>
                       </div>
                     </div>
                   </div>
 
                   <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-accent-cyan text-[#05060f]">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-accent-moss text-[#12161A]">
                       {edu.score}
                     </span>
-                    <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">
+                    <span className="text-xs text-slate-500 dark:text-content-muted font-mono">
                       {edu.period}
                     </span>
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-700 dark:text-[#a6adc8] pt-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-content-muted pt-4 leading-relaxed">
                   {edu.details}
                 </p>
               </motion.div>
@@ -223,8 +223,8 @@ export const AboutPage = () => {
                   onClick={() => setSelectedCertCategory(cat)}
                   className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
                     isActive
-                      ? 'btn-hud-primary text-[#05060f]'
-                      : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-cyan hover:text-accent-cyan'
+                      ? 'btn-hud-primary text-[#12161A]'
+                      : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-moss hover:text-accent-moss'
                   }`}
                 >
                   {cat}
@@ -241,28 +241,28 @@ export const AboutPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: idx * 0.05 }}
-                className="p-6 rounded-2xl hud-card border border-slate-200 dark:border-white/10 flex flex-col justify-between hover:border-accent-cyan/40 transition-colors"
+                className="p-6 rounded-2xl hud-card border border-slate-200 dark:border-white/10 flex flex-col justify-between hover:border-accent-moss/40 transition-colors"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-accent-cyan/15 text-accent-cyan border border-accent-cyan/30">
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-accent-moss/15 text-accent-moss border border-accent-moss/30">
                       {cert.badge || cert.category || 'Certification'}
                     </span>
-                    <span className="text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                    <span className="text-[11px] text-slate-500 dark:text-content-muted font-mono">
                       {cert.date}
                     </span>
                   </div>
 
-                  <h4 className="text-base font-bold font-heading text-slate-900 dark:text-[#f2f3f8] leading-snug">
+                  <h4 className="text-base font-bold font-heading text-slate-900 dark:text-[#EDEDE6] leading-snug">
                     {cert.title}
                   </h4>
 
-                  <div className="text-xs text-slate-600 dark:text-[#a6adc8]">
-                    Issued by <strong className="text-slate-900 dark:text-[#f2f3f8]">{cert.issuer}</strong>
+                  <div className="text-xs text-slate-600 dark:text-content-muted">
+                    Issued by <strong className="text-slate-900 dark:text-[#EDEDE6]">{cert.issuer}</strong>
                   </div>
 
                   {cert.credentialId && (
-                    <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                    <div className="text-[11px] font-mono text-slate-500 dark:text-content-muted">
                       ID: {cert.credentialId}
                     </div>
                   )}

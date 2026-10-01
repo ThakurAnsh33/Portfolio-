@@ -194,7 +194,7 @@ export function predictDisruption(rainfallMm: number, elevationM: number, slopeD
     githubUrl: "<your NER-SLAP GitHub repo URL>",
     liveDemoUrl: "https://ner-slap-final.onrender.com/",
     featured: true,
-    gradient: "from-emerald-600/30 via-teal-600/20 to-cyan-600/30",
+    gradient: "from-accent-moss/20 via-accent-mossDeep/15 to-transparent",
   },
   {
     id: "primebid",
@@ -276,7 +276,7 @@ export const handlePlaceBid = (io, socket) => {
     githubUrl: "https://github.com/ThakurAnsh33",
     liveDemoUrl: "https://github.com/ThakurAnsh33",
     featured: true,
-    gradient: "from-blue-600/30 via-indigo-600/20 to-purple-600/30",
+    gradient: "from-accent-moss/15 via-hud-elevated to-transparent",
   },
   {
     id: "civicpulse",
@@ -335,7 +335,7 @@ export const triageGrievance = async (grievanceText, category) => {
     githubUrl: "https://github.com/ThakurAnsh33",
     liveDemoUrl: "https://github.com/ThakurAnsh33",
     featured: true,
-    gradient: "from-cyan-600/30 via-blue-600/20 to-violet-600/30",
+    gradient: "from-accent-moss/20 via-hud-surface to-transparent",
   },
   {
     id: "home-services",
@@ -400,7 +400,7 @@ export const createBooking = async (req, res) => {
     githubUrl: "https://github.com/ThakurAnsh33",
     liveDemoUrl: "https://github.com/ThakurAnsh33",
     featured: false,
-    gradient: "from-violet-600/30 via-purple-600/20 to-pink-600/30",
+    gradient: "from-hud-elevated via-hud-surface to-transparent",
   },
   {
     id: "lpu-clothings",
@@ -459,7 +459,7 @@ class CartController {
     githubUrl: "https://github.com/ThakurAnsh33",
     liveDemoUrl: "https://github.com/ThakurAnsh33",
     featured: false,
-    gradient: "from-emerald-600/30 via-teal-600/20 to-blue-600/30",
+    gradient: "from-hud-elevated via-hud-surface to-transparent",
   },
 ];
 

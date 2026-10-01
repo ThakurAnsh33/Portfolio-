@@ -110,7 +110,7 @@ export const Skills = () => {
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
                 selectedCategory === cat
                   ? 'btn-hud-primary scale-105'
-                  : 'hud-card text-slate-700 dark:text-[#a6adc8] border border-slate-200 dark:border-white/10 hover:border-accent-cyan hover:text-accent-cyan'
+                  : 'hud-card text-slate-700 dark:text-content-muted border border-slate-200 dark:border-white/10 hover:border-accent-moss hover:text-accent-moss'
               }`}
             >
               {cat}
@@ -137,15 +137,15 @@ export const Skills = () => {
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-slate-200 dark:border-white/10 gap-2">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-[#0b0d1a] dark:text-[#f2f3f8] flex items-center gap-2.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-accent-cyan shadow-hud-glow"></span>
+                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-[#14181C] dark:text-[#EDEDE6] flex items-center gap-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-accent-moss shadow-hud-glow"></span>
                     {catGroup.category}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-[#a6adc8] mt-1">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-content-muted mt-1">
                     {catGroup.description}
                   </p>
                 </div>
-                <span className="text-xs font-mono text-accent-cyan bg-accent-cyan/10 px-3 py-1 rounded-full border border-accent-cyan/20 self-start sm:self-auto font-medium">
+                <span className="text-xs font-mono text-accent-moss bg-accent-moss/10 px-3 py-1 rounded-full border border-accent-moss/20 self-start sm:self-auto font-medium">
                   {catGroup.skills.length} competencies
                 </span>
               </div>
@@ -168,7 +168,7 @@ export const Skills = () => {
                         damping: 18,
                       }}
                       whileHover={{ scale: 1.04, y: -3 }}
-                      className="group p-4 rounded-2xl bg-white/90 dark:bg-[#0f1120]/90 backdrop-blur-md border border-slate-200 dark:border-white/10 hover:border-accent-cyan/50 dark:hover:border-accent-cyan/50 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-hud-glow relative"
+                      className="group p-4 rounded-2xl bg-white/90 dark:bg-[#1B2127]/90 backdrop-blur-md border border-slate-200 dark:border-white/10 hover:border-accent-moss/50 dark:hover:border-accent-moss/50 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-hud-glow relative"
                     >
                       <div>
                         <div className="flex items-center justify-between mb-3">
@@ -176,17 +176,17 @@ export const Skills = () => {
                             className="w-10 h-10 rounded-xl flex items-center justify-center text-xl transition-transform group-hover:scale-110"
                             style={{
                               backgroundColor: `${skill.color}15`,
-                              color: skill.color || '#3b82f6',
+                              color: skill.color || '#7A9471',
                             }}
                           >
                             <IconComponent />
                           </div>
-                          <span className="text-xs font-mono font-semibold text-accent-cyan dark:text-accent-cyan">
+                          <span className="text-xs font-mono font-semibold text-accent-moss dark:text-accent-moss">
                             {skill.level}%
                           </span>
                         </div>
 
-                        <h4 className="text-sm font-semibold text-[#0b0d1a] dark:text-[#f2f3f8] group-hover:text-accent-cyan transition-colors">
+                        <h4 className="text-sm font-semibold text-[#14181C] dark:text-[#EDEDE6] group-hover:text-accent-moss transition-colors">
                           {skill.name}
                         </h4>
                       </div>
@@ -199,16 +199,16 @@ export const Skills = () => {
                             whileInView={{ width: `${skill.level}%` }}
                             viewport={{ once: true }}
                             transition={{ duration: 1, ease: 'easeOut' }}
-                            className="h-full rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500"
+                            className="h-full rounded-full bg-gradient-to-r from-accent-moss to-accent-mossDeep"
                           />
                         </div>
 
                         {/* Interactive dynamic project note on hover */}
                         <div
-                          className="mt-2 text-[10px] font-mono text-slate-500 dark:text-[#a6adc8] group-hover:text-accent-cyan transition-colors truncate flex items-center gap-1"
+                          className="mt-2 text-[10px] font-mono text-slate-500 dark:text-content-muted group-hover:text-accent-moss transition-colors truncate flex items-center gap-1"
                           title={projectNote}
                         >
-                          <Sparkles size={10} className="shrink-0 text-accent-cyan/70" />
+                          <Sparkles size={10} className="shrink-0 text-accent-moss/70" />
                           <span className="truncate">{projectNote}</span>
                         </div>
                       </div>

@@ -41,16 +41,16 @@ export const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-accent-moss/10 text-accent-moss border border-accent-moss/20">
                 <Sparkles size={13} />
                 <span>Executive Overview</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-[#f2f3f8] tracking-tight">
-                Architecting Full-Stack Systems with <span className="text-accent-cyan">Precision & Performance</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-[#EDEDE6] tracking-tight">
+                Architecting Full-Stack Systems with <span className="text-accent-moss">Precision & Performance</span>
               </h2>
 
-              <p className="text-base text-slate-700 dark:text-[#a6adc8] leading-relaxed">
+              <p className="text-base text-slate-700 dark:text-[#9AA39A] leading-relaxed">
                 {personalInfo.bioIntro}
               </p>
 
@@ -60,10 +60,10 @@ export const HomePage = () => {
                     key={idx}
                     className="p-4 rounded-2xl hud-card border border-slate-200 dark:border-white/10 text-center"
                   >
-                    <div className="text-2xl font-extrabold font-heading text-accent-cyan">
+                    <div className="text-2xl font-extrabold font-heading text-accent-moss">
                       {s.value}
                     </div>
-                    <div className="text-xs font-bold text-slate-900 dark:text-[#f2f3f8] mt-0.5">
+                    <div className="text-xs font-bold text-slate-900 dark:text-[#EDEDE6] mt-0.5">
                       {s.label}
                     </div>
                     <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">
@@ -84,7 +84,7 @@ export const HomePage = () => {
 
                 <Link
                   to="/experience"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold hud-card text-slate-700 dark:text-[#f2f3f8] hover:text-accent-cyan border border-slate-200 dark:border-white/10 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold hud-card text-slate-700 dark:text-[#EDEDE6] hover:text-accent-moss border border-slate-200 dark:border-white/10 transition-colors"
                 >
                   <Briefcase size={16} />
                   <span>Work Experience</span>
@@ -94,9 +94,9 @@ export const HomePage = () => {
 
             {/* Live Terminal & Interactive Capabilities Card */}
             <div className="lg:col-span-5 space-y-4">
-              <div className="p-6 rounded-3xl hud-card border border-accent-cyan/30 dark:bg-[#05060f]/90 bg-white/95 space-y-4 shadow-xl">
+              <div className="p-6 rounded-3xl hud-card border border-accent-moss/30 dark:bg-[#12161A]/90 bg-white/95 space-y-4 shadow-xl">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/10 text-xs font-mono text-slate-500 dark:text-slate-400">
-                  <span className="flex items-center gap-2 text-accent-cyan font-bold">
+                  <span className="flex items-center gap-2 text-accent-moss font-bold">
                     <Terminal size={14} /> Developer Quick Bar
                   </span>
                   <span className="text-emerald-500 dark:text-emerald-400 font-semibold">READY</span>
@@ -104,18 +104,18 @@ export const HomePage = () => {
 
                 <div className="space-y-2 text-xs font-mono text-slate-700 dark:text-slate-300">
                   <div className="text-slate-500"># Fast navigate using keyboard shortcuts:</div>
-                  <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-[#0f1120] border border-slate-200 dark:border-white/5 space-y-1.5">
+                  <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-[#1B2127] border border-slate-200 dark:border-white/5 space-y-1.5">
                     <div className="flex items-center justify-between">
                       <span className="text-slate-600 dark:text-slate-400">Command Palette:</span>
-                      <span className="px-2 py-0.5 rounded bg-accent-cyan/15 text-accent-cyan font-bold">Ctrl + K</span>
+                      <span className="px-2 py-0.5 rounded bg-accent-amber/15 text-accent-amber font-bold">Ctrl + K</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-slate-600 dark:text-slate-400">Shortcut Cheat Sheet:</span>
-                      <span className="px-2 py-0.5 rounded bg-accent-cyan/15 text-accent-cyan font-bold">?</span>
+                      <span className="px-2 py-0.5 rounded bg-accent-moss/15 text-accent-moss font-bold">?</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-slate-600 dark:text-slate-400">Quick Jump Routes:</span>
-                      <span className="px-2 py-0.5 rounded bg-accent-cyan/15 text-accent-cyan font-bold">G + [H/A/S/E/P/C]</span>
+                      <span className="px-2 py-0.5 rounded bg-accent-moss/15 text-accent-moss font-bold">G + [H/A/S/E/P/C]</span>
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export const HomePage = () => {
                       <Link
                         key={s.name}
                         to={`/projects?tech=${encodeURIComponent(s.name.toLowerCase())}`}
-                        className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:text-accent-cyan hover:bg-accent-cyan/10 border border-slate-200 dark:border-white/10 transition-colors"
+                        className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:text-accent-moss hover:bg-accent-moss/10 border border-slate-200 dark:border-white/10 transition-colors"
                       >
                         {s.name}
                       </Link>
@@ -137,7 +137,7 @@ export const HomePage = () => {
 
                 <Link
                   to="/skills"
-                  className="block text-center text-xs font-mono text-accent-cyan hover:underline pt-1"
+                  className="block text-center text-xs font-mono text-accent-moss hover:underline pt-1"
                 >
                   → View Interactive Skills &amp; Projects Matrix
                 </Link>
@@ -153,21 +153,21 @@ export const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-accent-moss/10 text-accent-moss border border-accent-moss/20 mb-3">
                 <Code2 size={13} />
                 <span>Selected Works</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-[#f2f3f8]">
+              <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-[#EDEDE6]">
                 Production &amp; Flagship Engineering
               </h2>
-              <p className="text-sm text-slate-600 dark:text-[#a6adc8] mt-1 max-w-xl">
+              <p className="text-sm text-slate-600 dark:text-[#9AA39A] mt-1 max-w-xl">
                 End-to-end full stack implementations with real-time bidding, AI triage, and scalable REST services.
               </p>
             </div>
 
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 text-sm font-bold text-accent-cyan hover:text-accent-violet transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-bold text-accent-moss hover:text-accent-mossDeep transition-colors group"
             >
               <span>Explore All Projects ({projects.length})</span>
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -196,17 +196,17 @@ export const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-8 rounded-3xl hud-card border border-slate-200 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl dark:bg-[#0f1120] bg-slate-100 border border-slate-200 dark:border-white/15 flex items-center justify-center text-accent-cyan shrink-0">
+              <div className="w-14 h-14 rounded-2xl dark:bg-[#1B2127] bg-slate-100 border border-slate-200 dark:border-white/15 flex items-center justify-center text-accent-moss shrink-0">
                 <Activity size={28} />
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                  <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#EDEDE6]">
                     Live GitHub Intelligence &amp; Repositories
                   </h3>
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                 </div>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-[#a6adc8] mt-0.5">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-[#9AA39A] mt-0.5">
                   Track real-time commits, open source contributions, and star counts directly from the Express API proxy.
                 </p>
               </div>
@@ -222,7 +222,7 @@ export const HomePage = () => {
               </Link>
               <Link
                 to="/changelog"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold hud-card text-slate-700 dark:text-[#f2f3f8] hover:text-accent-cyan border border-slate-200 dark:border-white/10 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold hud-card text-slate-700 dark:text-[#EDEDE6] hover:text-accent-moss border border-slate-200 dark:border-white/10 transition-colors"
               >
                 <span>Engineering Log</span>
               </Link>
@@ -232,18 +232,18 @@ export const HomePage = () => {
       </section>
 
       {/* Contact CTA Strip */}
-      <section id="contact" className="py-20 relative bg-gradient-to-b from-transparent via-accent-cyan/5 to-transparent">
+      <section id="contact" className="py-20 relative border-t border-slate-200 dark:border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-semibold bg-accent-cyan/15 text-accent-cyan border border-accent-cyan/30">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-semibold bg-accent-moss/15 text-accent-moss border border-accent-moss/30">
             <Mail size={13} />
             <span>Open for Opportunities</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-[#f2f3f8]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-[#EDEDE6]">
             Let's Build Something High-Impact Together
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 dark:text-[#a6adc8] max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-[#9AA39A] max-w-xl mx-auto leading-relaxed">
             I'm actively seeking Full-Time Software Engineering roles &amp; Full-Stack MERN opportunities. Reach out for project inquiries, technical interviews, or collaboration.
           </p>
 
@@ -258,9 +258,9 @@ export const HomePage = () => {
 
             <a
               href={`mailto:${personalInfo.email}`}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold hud-card text-slate-700 dark:text-[#f2f3f8] hover:text-accent-cyan border border-slate-200 dark:border-white/10 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold hud-card text-slate-700 dark:text-[#EDEDE6] hover:text-accent-moss border border-slate-200 dark:border-white/10 transition-colors"
             >
-              <Mail size={16} className="text-accent-cyan" />
+              <Mail size={16} className="text-accent-moss" />
               <span>Email Directly</span>
             </a>
 
@@ -268,7 +268,7 @@ export const HomePage = () => {
               href={personalInfo.linkedIn}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold hud-card text-slate-700 dark:text-[#f2f3f8] hover:text-accent-cyan border border-slate-200 dark:border-white/10 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold hud-card text-slate-700 dark:text-[#EDEDE6] hover:text-accent-moss border border-slate-200 dark:border-white/10 transition-colors"
             >
               <Linkedin size={16} />
               <span>LinkedIn</span>
@@ -278,7 +278,7 @@ export const HomePage = () => {
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold hud-card text-slate-700 dark:text-[#f2f3f8] hover:text-accent-cyan border border-slate-200 dark:border-white/10 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold hud-card text-slate-700 dark:text-[#EDEDE6] hover:text-accent-moss border border-slate-200 dark:border-white/10 transition-colors"
             >
               <Github size={16} />
               <span>GitHub Profile</span>

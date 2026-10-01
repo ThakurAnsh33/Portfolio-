@@ -111,54 +111,53 @@ export const Hero = () => {
             {/* Sci-Fi HUD Availability Pill */}
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full hud-card border text-xs sm:text-sm font-semibold mb-4">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-cyan opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-cyan" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-amber opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-amber" />
               </span>
-              <span className="text-[#0b0d1a] dark:text-[#f2f3f8]">
+              <span className="text-[#14181C] dark:text-[#EDEDE6]">
                 Open for Campus Placements & Engineering Roles
               </span>
             </div>
 
             {/* Dynamic Local Time-Based Greeting */}
-            <div className="flex items-center gap-2 mb-2 text-xs sm:text-sm font-mono font-medium text-accent-cyan">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse" />
+            <div className="flex items-center gap-2 mb-2 text-xs sm:text-sm font-mono font-medium text-accent-moss">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-moss animate-pulse" />
               <span>{timeGreeting}</span>
-              <span className="text-slate-400 dark:text-slate-500 font-sans text-xs">• Welcome to my portfolio</span>
+              <span className="text-slate-400 dark:text-content-muted font-sans text-xs">• Welcome to my portfolio</span>
             </div>
 
-            {/* Large Bold Headline with Soft Animated Gradient Glow Behind Name */}
+            {/* Large Bold Headline with Soft Glow Behind Name */}
             <div className="relative">
-              {/* Soft neon gradient glow strictly BEHIND the text layer with subtle parallax */}
               <motion.div
                 style={{ x: parallaxX1, y: parallaxY1 }}
-                className="absolute -top-10 -left-10 w-72 h-36 bg-gradient-to-r from-accent-cyan/25 to-accent-violet/25 blur-3xl -z-10 pointer-events-none rounded-full"
+                className="absolute -top-10 -left-10 w-72 h-36 bg-accent-moss/10 blur-3xl -z-10 pointer-events-none rounded-full"
               />
               
-              <h1 className="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-[#0b0d1a] dark:text-[#f2f3f8] leading-[1.08]">
+              <h1 className="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-[#14181C] dark:text-[#EDEDE6] leading-[1.08]">
                 Hi, I'm{' '}
                 <span className="relative inline-block">
                   <span className="hud-headline-gradient">Ansh Singh</span>
-                  {/* Subtle glowing underline accent */}
-                  <span className="absolute -bottom-1.5 left-0 right-0 h-1 bg-gradient-to-r from-accent-cyan via-accent-violet to-transparent rounded-full" />
+                  {/* Topographic Survey underline accent */}
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-1 bg-gradient-to-r from-accent-moss via-accent-mossDeep to-transparent rounded-full" />
                 </span>
               </h1>
             </div>
 
             {/* Typewriter Role Line (High Contrast) */}
             <div className="mt-5 h-12 flex items-center">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-heading font-semibold text-[#0b0d1a] dark:text-[#f2f3f8] flex items-center flex-wrap gap-2">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-heading font-semibold text-[#14181C] dark:text-[#EDEDE6] flex items-center flex-wrap gap-2">
                 <span className="text-slate-600 dark:text-content-muted">Specializing in</span>
-                <span className="text-accent-cyan font-bold">
+                <span className="text-accent-moss font-bold">
                   {displayedText}
                 </span>
-                <span className="inline-block w-0.5 h-6 bg-accent-cyan animate-pulse" />
+                <span className="inline-block w-0.5 h-6 bg-accent-moss animate-pulse" />
               </h2>
             </div>
 
             {/* 2-Line High-Contrast Intro Body (Min 16px, line-height 1.6+) */}
-            <p className="mt-4 text-base sm:text-lg text-slate-700 dark:text-[#e6e6f0] max-w-2xl leading-relaxed font-sans">
+            <p className="mt-4 text-base sm:text-lg text-slate-700 dark:text-[#EDEDE6] max-w-2xl leading-relaxed font-sans">
               Computer Science undergraduate at{' '}
-              <strong className="text-[#0b0d1a] dark:text-white font-semibold">
+              <strong className="text-[#14181C] dark:text-white font-semibold">
                 Lovely Professional University
               </strong>{' '}
               passionate about architecting production-ready full-stack web applications with modern React UI,
@@ -168,19 +167,18 @@ export const Hero = () => {
             {/* Fast Location & Academic Status Badges */}
             <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-content-muted">
               <span className="inline-flex items-center gap-1.5 font-medium">
-                <GraduationCap size={17} className="text-accent-cyan" />
-                <span className="text-[#0b0d1a] dark:text-[#f2f3f8] font-semibold">CGPA 8.3 / 10.0</span>
+                <GraduationCap size={17} className="text-accent-moss" />
+                <span className="text-[#14181C] dark:text-[#EDEDE6] font-semibold">CGPA 8.3 / 10.0</span>
               </span>
               <span className="opacity-40">•</span>
               <span className="inline-flex items-center gap-1.5 font-medium">
-                <MapPin size={17} className="text-accent-violet" />
+                <MapPin size={17} className="text-accent-mossDeep" />
                 <span>{personalInfo.location}</span>
               </span>
             </div>
 
-            {/* Call To Action Buttons (Soft Pulsing Glow & Magnetic Hover) */}
+            {/* Call To Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              {/* Primary CTA with Pulsing Neon Glow */}
               <MagneticButton>
                 <a
                   href="#projects"
@@ -192,16 +190,16 @@ export const Hero = () => {
                 </a>
               </MagneticButton>
 
-              {/* Download Resume Button (Tracked Endpoint) */}
+              {/* Download Resume Button */}
               <MagneticButton>
                 <a
                   href={getResumeDownloadUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   download="Ansh_Singh_Resume.pdf"
-                  className="px-6 py-3.5 rounded-xl text-sm sm:text-base font-semibold hud-card hud-card-interactive text-[#0b0d1a] dark:text-[#f2f3f8] flex items-center gap-2 border"
+                  className="px-6 py-3.5 rounded-xl text-sm sm:text-base font-semibold hud-card hud-card-interactive text-[#14181C] dark:text-[#EDEDE6] flex items-center gap-2 border"
                 >
-                  <FileDown size={17} className="text-accent-cyan" />
+                  <FileDown size={17} className="text-accent-moss" />
                   <span>Download Resume</span>
                 </a>
               </MagneticButton>
@@ -211,7 +209,7 @@ export const Hero = () => {
                 <a
                   href="#contact"
                   onClick={(e) => scrollToSection(e, 'contact')}
-                  className="px-5 py-3.5 rounded-xl text-sm sm:text-base font-medium text-slate-700 dark:text-content-muted hover:text-[#0b0d1a] dark:hover:text-[#f2f3f8] transition-colors"
+                  className="px-5 py-3.5 rounded-xl text-sm sm:text-base font-medium text-slate-700 dark:text-content-muted hover:text-[#14181C] dark:hover:text-[#EDEDE6] transition-colors"
                 >
                   Contact Me
                 </a>
@@ -220,7 +218,7 @@ export const Hero = () => {
 
             {/* Social Links Row */}
             <div className="mt-10 pt-6 border-t border-slate-200 dark:border-white/10 flex items-center gap-4 text-sm text-slate-600 dark:text-content-muted">
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-[#a6adc8]">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-content-muted">
                 Connect:
               </span>
 
@@ -229,7 +227,7 @@ export const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
-                className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-cyan dark:hover:text-accent-cyan"
+                className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-moss dark:hover:text-accent-moss"
               >
                 <Github size={18} />
               </a>
@@ -239,7 +237,7 @@ export const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
-                className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-cyan dark:hover:text-accent-cyan"
+                className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-moss dark:hover:text-accent-moss"
               >
                 <Linkedin size={18} />
               </a>
@@ -247,7 +245,7 @@ export const Hero = () => {
               <a
                 href={`mailto:${personalInfo.email}`}
                 aria-label="Send Email"
-                className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-cyan dark:hover:text-accent-cyan"
+                className="p-2.5 rounded-xl hud-card hud-card-interactive text-slate-700 dark:text-content-muted hover:text-accent-moss dark:hover:text-accent-moss"
               >
                 <Mail size={18} />
               </a>
@@ -266,7 +264,7 @@ export const Hero = () => {
               {/* Background HUD accent glow behind card with inverse parallax */}
               <motion.div
                 style={{ x: parallaxX2, y: parallaxY2 }}
-                className="absolute -inset-2 bg-gradient-to-r from-accent-cyan/20 to-accent-violet/20 rounded-3xl blur-xl opacity-60 -z-10"
+                className="absolute -inset-2 bg-accent-moss/10 rounded-3xl blur-xl opacity-40 -z-10"
               />
 
               {/* Glassmorphic HUD Panel Card */}
@@ -275,39 +273,39 @@ export const Hero = () => {
                 {/* HUD Header Bar */}
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200 dark:border-white/10">
                   <div className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-accent-cyan animate-pulse" />
-                    <span className="font-mono text-xs uppercase tracking-wider font-semibold text-accent-cyan">
+                    <div className="w-2.5 h-2.5 rounded-full bg-accent-amber animate-pulse" />
+                    <span className="font-mono text-xs uppercase tracking-wider font-semibold text-accent-moss">
                       HUD // DEV.PROFILE.LIVE
                     </span>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-accent-violet/15 text-accent-violet border border-accent-violet/30">
+                  <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-accent-mossDeep/20 text-accent-moss border border-accent-mossDeep/30">
                     MERN Stack
                   </span>
                 </div>
 
                 {/* Profile Identity Badge */}
-                <div className="flex items-center gap-3.5 mb-5 p-3 rounded-2xl bg-slate-100/70 dark:bg-[#14172a]/70 border border-slate-200/80 dark:border-white/5">
+                <div className="flex items-center gap-3.5 mb-5 p-3 rounded-2xl bg-slate-100/70 dark:bg-[#1B2127]/90 border border-slate-200/80 dark:border-white/5">
                   <div className="relative shrink-0">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl p-[2px] bg-gradient-to-tr from-accent-cyan via-accent-violet to-emerald-400 shadow-hud-glow overflow-hidden">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl p-[2px] bg-gradient-to-tr from-accent-moss via-accent-mossDeep to-accent-amber shadow-hud-glow overflow-hidden">
                       <img
                         src={personalInfo.profileImage || "/profile.png"}
                         alt={personalInfo.name}
                         className="w-full h-full object-cover object-top rounded-[14px]"
                       />
                     </div>
-                    <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white dark:border-[#05060f] flex items-center justify-center" title="Available for Roles">
+                    <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-accent-amber border-2 border-white dark:border-[#12161A] flex items-center justify-center" title="Available for Roles">
                       <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
                     </span>
                   </div>
                   <div className="min-w-0">
-                    <div className="text-base sm:text-lg font-bold font-heading text-[#0b0d1a] dark:text-[#f2f3f8] leading-tight truncate">
+                    <div className="text-base sm:text-lg font-bold font-heading text-[#14181C] dark:text-[#EDEDE6] leading-tight truncate">
                       {personalInfo.name}
                     </div>
-                    <div className="text-xs text-accent-cyan font-mono font-medium truncate">
+                    <div className="text-xs text-accent-moss font-mono font-medium truncate">
                       Full-Stack MERN Developer
                     </div>
-                    <div className="text-[11px] text-slate-500 dark:text-[#a6adc8] flex items-center gap-1 mt-0.5 truncate">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <div className="text-[11px] text-slate-500 dark:text-content-muted flex items-center gap-1 mt-0.5 truncate">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent-moss" />
                       <span>LPU B.Tech CSE • Ready to Ship</span>
                     </div>
                   </div>
@@ -315,12 +313,12 @@ export const Hero = () => {
 
                 {/* Core Metric Highlights */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-[#14172a]/90 border border-slate-200 dark:border-white/10">
-                    <div className="flex items-center gap-2 text-accent-cyan mb-1">
+                  <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-[#1B2127]/90 border border-slate-200 dark:border-white/10">
+                    <div className="flex items-center gap-2 text-accent-moss mb-1">
                       <GraduationCap size={18} />
                       <span className="text-xs font-semibold text-slate-500 dark:text-content-muted">LPU B.Tech</span>
                     </div>
-                    <div className="text-2xl font-heading font-extrabold text-[#0b0d1a] dark:text-[#f2f3f8]">
+                    <div className="text-2xl font-heading font-extrabold text-[#14181C] dark:text-[#EDEDE6]">
                       <AnimatedCounter to={8.3} decimals={1} suffix=" CGPA" />
                     </div>
                     <div className="text-[11px] text-slate-500 dark:text-content-muted mt-0.5">
@@ -328,12 +326,12 @@ export const Hero = () => {
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-[#14172a]/90 border border-slate-200 dark:border-white/10">
-                    <div className="flex items-center gap-2 text-accent-violet mb-1">
+                  <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-[#1B2127]/90 border border-slate-200 dark:border-white/10">
+                    <div className="flex items-center gap-2 text-accent-mossDeep mb-1">
                       <Code2 size={18} />
                       <span className="text-xs font-semibold text-slate-500 dark:text-content-muted">Live Projects</span>
                     </div>
-                    <div className="text-2xl font-heading font-extrabold text-[#0b0d1a] dark:text-[#f2f3f8]">
+                    <div className="text-2xl font-heading font-extrabold text-[#14181C] dark:text-[#EDEDE6]">
                       <AnimatedCounter to={4} suffix="+ Built" />
                     </div>
                     <div className="text-[11px] text-slate-500 dark:text-content-muted mt-0.5">
@@ -341,12 +339,12 @@ export const Hero = () => {
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-[#14172a]/90 border border-slate-200 dark:border-white/10">
-                    <div className="flex items-center gap-2 text-accent-cyan mb-1">
+                  <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-[#1B2127]/90 border border-slate-200 dark:border-white/10">
+                    <div className="flex items-center gap-2 text-accent-moss mb-1">
                       <Sparkles size={18} />
                       <span className="text-xs font-semibold text-slate-500 dark:text-content-muted">Credentials</span>
                     </div>
-                    <div className="text-2xl font-heading font-extrabold text-[#0b0d1a] dark:text-[#f2f3f8]">
+                    <div className="text-2xl font-heading font-extrabold text-[#14181C] dark:text-[#EDEDE6]">
                       <AnimatedCounter to={11} suffix=" Verified" />
                     </div>
                     <div className="text-[11px] text-slate-500 dark:text-content-muted mt-0.5">
@@ -354,12 +352,12 @@ export const Hero = () => {
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-[#14172a]/90 border border-slate-200 dark:border-white/10">
+                  <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-[#1B2127]/90 border border-slate-200 dark:border-white/10">
                     <div className="flex items-center gap-2 text-emerald-400 mb-1">
                       <CheckCircle2 size={18} />
                       <span className="text-xs font-semibold text-slate-500 dark:text-content-muted">Internship</span>
                     </div>
-                    <div className="text-2xl font-heading font-extrabold text-[#0b0d1a] dark:text-[#f2f3f8]">
+                    <div className="text-2xl font-heading font-extrabold text-[#14181C] dark:text-[#EDEDE6]">
                       Completed
                     </div>
                     <div className="text-[11px] text-slate-500 dark:text-content-muted mt-0.5">
@@ -372,14 +370,14 @@ export const Hero = () => {
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-content-muted mb-3 flex items-center justify-between">
                     <span>Core Technology Stack</span>
-                    <span className="text-accent-cyan font-mono text-[11px]">v2026.ready</span>
+                    <span className="text-accent-moss font-mono text-[11px]">v2026.ready</span>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     {['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS', 'REST APIs', 'JWT', 'Socket.IO'].map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-[#14172a] text-[#0b0d1a] dark:text-[#f2f3f8] border border-slate-200 dark:border-white/10"
+                        className="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-[#222A30] text-[#14181C] dark:text-[#EDEDE6] border border-slate-200 dark:border-white/10"
                       >
                         {tech}
                       </span>
@@ -390,7 +388,7 @@ export const Hero = () => {
                 {/* HUD Footer Status */}
                 <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-xs text-slate-500 dark:text-content-muted">
                   <div className="flex items-center gap-2">
-                    <Activity size={14} className="text-accent-cyan" />
+                    <Activity size={14} className="text-accent-moss" />
                     <span>Server: Unified Port 5000</span>
                   </div>
                   <span className="text-emerald-500 dark:text-emerald-400 font-semibold flex items-center gap-1">
