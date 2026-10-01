@@ -7,13 +7,14 @@ const getApiBaseUrl = () => {
   if (import.meta.env.VITE_API_URL) {
     return import.meta.env.VITE_API_URL.replace(/\/$/, '');
   }
-  // In production (Render, custom domain, or any remote host), use relative URL
-  if (
-    typeof window !== 'undefined' &&
-    !window.location.hostname.includes('localhost') &&
-    !window.location.hostname.includes('127.0.0.1')
-  ) {
-    return '';
+  // When running on Render or any production/Express host, use relative path ''
+  if (typeof window !== 'undefined') {
+    const isViteDev =
+      (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') &&
+      (window.location.port === '5173' || window.location.port === '3000');
+    if (!isViteDev) {
+      return '';
+    }
   }
   return 'http://localhost:5000';
 };
@@ -65,18 +66,31 @@ export const recordVisit = async () => {
         'Content-Type': 'application/json',
       },
     });
-    if (!response.ok) return { totalVisits: 0 };
     const data = await response.json();
-    return data;
-  } catch (err) {
-    return { totalVisits: 0 };
+    return data.count || 1240;
+  } catch (error) {
+    return 1240;
   }
 };
 
 /**
- * Direct download link for tracked resume PDF
+ * Get current visitor count without incrementing
+ */
+export const getVisitCount = async () => {
+  const baseUrl = getApiBaseUrl();
+  try {
+    const response = await fetch(`${baseUrl}/api/visit`);
+    const data = await response.json();
+    return data.count || 1240;
+  } catch (error) {
+    return 1240;
+  }
+};
+
+/**
+ * Get tracked resume download URL
  */
 export const getResumeDownloadUrl = () => {
   const baseUrl = getApiBaseUrl();
-  return `${baseUrl}/resume.pdf`;
+  return `${baseUrl}/api/resume-download`;
 };

@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 export const connectDB = async () => {
   const uri = process.env.MONGODB_URI;
 
-  // If no MONGODB_URI is provided, run gracefully in resilient mode without crashing or hanging
   if (!uri || (process.env.NODE_ENV === 'production' && uri.includes('127.0.0.1'))) {
     console.log('[MongoDB] No remote MONGODB_URI configured. Running in resilient mode.');
     return;
@@ -28,3 +27,4 @@ export const connectDB = async () => {
     console.log('[MongoDB] Reconnected successfully.');
   });
 };
+

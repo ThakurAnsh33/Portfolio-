@@ -31,27 +31,15 @@ const PORT = process.env.PORT || 5000;
 // Connect to MongoDB
 connectDB();
 
-// Middleware: CORS Configuration
-const allowedOrigins = [
-  'http://localhost:5173',
-  'http://127.0.0.1:5173',
-  'http://localhost:3000',
-  'http://127.0.0.1:3000',
-  'http://localhost:5000',
-  'http://127.0.0.1:5000',
-  process.env.CLIENT_URL,
-].filter(Boolean);
-
+// Middleware: CORS Configuration - dynamic origin reflection to support same-origin, Render, preview URLs & local dev
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV !== 'production') {
-        return callback(null, true);
-      }
-      return callback(new Error('Blocked by CORS policy'));
+      // Always allow all origins dynamically so static assets and API calls are never blocked
+      callback(null, true);
     },
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     credentials: true,
   })
 );
@@ -61,7 +49,18 @@ app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 
 // Serve built frontend static files if present
 if (fs.existsSync(clientDistPath)) {
-  app.use(express.static(clientDistPath));
+  app.use(
+    express.static(clientDistPath, {
+      maxAge: '1d',
+      setHeaders: (res, filePath) => {
+        // Ensure static assets are freely accessible
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        if (filePath.endsWith('.html')) {
+          res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+        }
+      },
+    })
+  );
 }
 
 // Health check endpoint
@@ -109,8 +108,14 @@ app.get('/api', (req, res) => {
 
 // SPA fallback: Serve index.html for all frontend routes
 app.get('*', (req, res) => {
+  // If the request was for a static asset or file with an extension that does not exist, return 404
+  if (req.path.startsWith('/assets/') || path.extname(req.path)) {
+    return res.status(404).type('text/plain').send('Asset not found');
+  }
+
   const indexPath = path.join(clientDistPath, 'index.html');
   if (fs.existsSync(indexPath)) {
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
     return res.sendFile(indexPath);
   }
   res.status(404).json({
