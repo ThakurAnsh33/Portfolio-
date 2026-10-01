@@ -47,9 +47,6 @@ const sendEmailNotification = async ({ name, email, message }) => {
         user: emailUser,
         pass: cleanPass,
       },
-      connectionTimeout: 4000,
-      greetingTimeout: 4000,
-      socketTimeout: 4000,
     });
 
     const mailOptions = {
@@ -112,11 +109,9 @@ const sendEmailNotification = async ({ name, email, message }) => {
   }
 };
 
-const inMemoryMessages = [];
-
 /**
  * @route   POST /api/contact
- * @desc    Submit a contact message, save to MongoDB or in-memory fallback, and dispatch email notification
+ * @desc    Submit a contact message, save to MongoDB, and dispatch email notification
  * @access  Public
  */
 export const submitContactMessage = async (req, res) => {
@@ -169,35 +164,36 @@ export const submitContactMessage = async (req, res) => {
       });
       console.log(`[Contact] New message saved to MongoDB (ID: ${savedRecord._id}) from ${name}`);
     } else {
-      const fallbackRecord = {
-        _id: `mem_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
-        name: name.trim(),
-        email: email.trim().toLowerCase(),
-        message: message.trim(),
-        createdAt: new Date().toISOString(),
-      };
-      inMemoryMessages.unshift(fallbackRecord);
-      if (inMemoryMessages.length > 50) inMemoryMessages.pop();
-      savedRecord = fallbackRecord;
-      console.log(`[Contact Resilient Mode] Stored in memory. Message from ${name} (${email}): "${message}"`);
+      console.warn(
+        `[Contact Resilient Mode] MongoDB not connected yet. Message received from ${name} (${email}): "${message}"`
+      );
     }
 
-    // Asynchronously dispatch email notification in background without blocking client response
-    sendEmailNotification({
+    // Trigger email notification and capture outcome
+    const emailResult = await sendEmailNotification({
       name: name.trim(),
       email: email.trim().toLowerCase(),
       message: message.trim(),
-    }).catch((e) => console.warn('[Contact Email Dispatch Error]:', e.message));
+    });
 
-    // Return 201 immediately (<50ms response) so user receives instant feedback
+    // Always return 201 success so user experience on frontend is seamless
     return res.status(201).json({
       success: true,
       message: 'Thank you! Your message has been received. Ansh will get back to you soon.',
-      data: {
-        id: savedRecord._id,
-        name: savedRecord.name,
-        createdAt: savedRecord.createdAt,
-      },
+      emailSent: emailResult.sent,
+      emailStatus: emailResult.sent
+        ? 'Notification email delivered to inbox'
+        : emailResult.reason || emailResult.error || 'Email dispatch skipped or failed',
+      data: savedRecord
+        ? {
+            id: savedRecord._id,
+            name: savedRecord.name,
+            createdAt: savedRecord.createdAt,
+          }
+        : {
+            name: name.trim(),
+            createdAt: new Date().toISOString(),
+          },
     });
   } catch (error) {
     console.error('[Contact Controller Error]:', error);
@@ -215,20 +211,20 @@ export const submitContactMessage = async (req, res) => {
  */
 export const getAllMessages = async (req, res) => {
   try {
-    if (mongoose.connection.readyState === 1) {
-      const messages = await Message.find().sort({ createdAt: -1 }).limit(100);
+    if (mongoose.connection.readyState !== 1) {
       return res.status(200).json({
         success: true,
-        count: messages.length,
-        messages,
+        count: 0,
+        messages: [],
+        note: 'MongoDB is currently in offline/disconnected state.',
       });
     }
 
+    const messages = await Message.find().sort({ createdAt: -1 }).limit(100);
     return res.status(200).json({
       success: true,
-      count: inMemoryMessages.length,
-      messages: inMemoryMessages,
-      note: 'MongoDB is in disconnected mode. Showing in-memory session messages.',
+      count: messages.length,
+      messages,
     });
   } catch (error) {
     return res.status(500).json({

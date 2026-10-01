@@ -273,7 +273,7 @@ export const Contact = () => {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="btn-hud-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-white"
+                    className="btn-hud-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold"
                   >
                     <Sparkles size={14} />
                     <span>Send Another Message</span>
@@ -398,7 +398,7 @@ export const Contact = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white btn-hud-primary disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold btn-hud-primary disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>

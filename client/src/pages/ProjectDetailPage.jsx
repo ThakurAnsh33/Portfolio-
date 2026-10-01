@@ -593,7 +593,7 @@ export const ProjectDetailPage = () => {
 
               <button
                 onClick={() => handleCopyCode(project.codeSnippet.code)}
-                className="px-3 py-1.5 rounded-lg text-xs font-mono font-semibold hud-card text-slate-300 hover:text-accent-cyan border border-white/10 flex items-center gap-1.5 transition-colors shrink-0"
+                className="px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white/10 hover:bg-white/20 text-slate-200 hover:text-accent-cyan border border-white/10 flex items-center gap-1.5 transition-colors shrink-0"
                 title="Copy snippet"
               >
                 {copied ? (

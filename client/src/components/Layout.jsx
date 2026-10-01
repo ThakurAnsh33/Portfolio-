@@ -115,7 +115,7 @@ export const Layout = () => {
 
       {/* Floating Quick Guide when 'G' key is initiated */}
       {gKeyPressed && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-xl hud-card border border-accent-cyan/60 bg-[#0f1120]/95 text-accent-cyan font-mono text-xs flex items-center gap-2 shadow-2xl backdrop-blur-md animate-bounce">
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-xl hud-card border border-accent-cyan/60 bg-white/95 dark:bg-[#0f1120]/95 text-accent-cyan font-mono text-xs flex items-center gap-2 shadow-2xl backdrop-blur-md animate-bounce">
           <span className="w-2 h-2 rounded-full bg-accent-cyan animate-ping" />
           <span>Go to: [H]ome, [A]bout, [S]kills, [E]xp, [P]rojects, [C]ontact, [D]egree, [G]itHub, [N]ow</span>
         </div>

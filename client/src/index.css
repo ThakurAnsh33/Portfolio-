@@ -9,13 +9,14 @@
   
   body {
     overflow-x: hidden;
-    background-color: #f7f8fc;
-    color: #0b0d1a;
+    background-color: #f8fafc;
+    color: #0f172a;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 16px;
     line-height: 1.65;
   }
 
+  html.dark body,
   .dark body {
     background-color: #05060f;
     color: #f2f3f8;
@@ -36,43 +37,65 @@
     background: rgba(79, 209, 255, 0.2);
   }
   ::-webkit-scrollbar-thumb:hover {
+    background: #0284c7;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
     background: #4fd1ff;
   }
 }
 
 @layer utilities {
+  /* High-Contrast Dynamic Accent Colors (WCAG AA Compliant in both Light and Dark) */
+  .text-accent-cyan {
+    color: #0284c7; /* Sky 600 / rich deep cyan-blue in light mode */
+  }
+  .dark .text-accent-cyan {
+    color: #4fd1ff; /* Electric cyan glow in dark mode */
+  }
+
+  .text-accent-violet {
+    color: #7c3aed; /* Deep violet in light mode */
+  }
+  .dark .text-accent-violet {
+    color: #a78bfa; /* Soft neon violet in dark mode */
+  }
+
   /* Futuristic HUD Glassmorphic Card */
   .hud-card {
-    background-color: rgba(255, 255, 255, 0.90);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(79, 209, 255, 0.28);
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+    color: #0f172a;
   }
 
   .dark .hud-card {
-    background-color: rgba(15, 17, 32, 0.78);
+    background-color: rgba(15, 17, 32, 0.82);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(79, 209, 255, 0.16);
     box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    color: #f2f3f8;
   }
 
   /* Glass Card alias for consistency */
   .glass-card {
-    background-color: rgba(255, 255, 255, 0.90);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(79, 209, 255, 0.28);
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+    color: #0f172a;
   }
 
   .dark .glass-card {
-    background-color: rgba(15, 17, 32, 0.78);
+    background-color: rgba(15, 17, 32, 0.82);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(79, 209, 255, 0.16);
     box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    color: #f2f3f8;
   }
 
   .hud-card-interactive {
@@ -81,6 +104,8 @@
 
   .hud-card-interactive:hover {
     transform: translateY(-3px);
+    border-color: rgba(2, 132, 199, 0.4);
+    box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.08);
   }
 
   .dark .hud-card-interactive:hover {
@@ -88,19 +113,18 @@
     box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.75), 0 0 25px -4px rgba(79, 209, 255, 0.25);
   }
 
-  .hud-card-interactive:hover {
-    border-color: rgba(79, 209, 255, 0.5);
-    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.12), 0 0 20px -4px rgba(79, 209, 255, 0.25);
-  }
-
   /* HUD Accent Gradient */
   .hud-gradient-accent {
+    background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+  }
+
+  .dark .hud-gradient-accent {
     background: linear-gradient(135deg, #4fd1ff 0%, #a78bfa 100%);
   }
 
-  /* Large Headline Gradient: Off-white to Cyan (Stays high-contrast and 100% legible) */
+  /* Large Headline Gradient */
   .hud-headline-gradient {
-    background: linear-gradient(135deg, #0b0d1a 40%, #2563eb 100%);
+    background: linear-gradient(135deg, #0f172a 35%, #0284c7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -114,15 +138,20 @@
   /* Glowing Accent Lines */
   .hud-glow-line {
     height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(2, 132, 199, 0.3), rgba(124, 58, 237, 0.3), transparent);
+  }
+
+  .dark .hud-glow-line {
+    height: 1px;
     background: linear-gradient(90deg, transparent, rgba(79, 209, 255, 0.6), rgba(167, 139, 250, 0.6), transparent);
   }
 
-  /* Circuit & Technical Grid Pattern (Far background, very low opacity) */
+  /* Circuit & Technical Grid Pattern */
   .bg-hud-grid {
     background-size: 48px 48px;
     background-image: 
-      linear-gradient(to right, rgba(79, 209, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(79, 209, 255, 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
   }
 
   .dark .bg-hud-grid {
@@ -132,16 +161,27 @@
       linear-gradient(to bottom, rgba(79, 209, 255, 0.045) 1px, transparent 1px);
   }
 
-  /* Soft Pulsing Primary Button Glow */
+  /* Primary Button Styling */
   .btn-hud-primary {
-    background: linear-gradient(135deg, #4fd1ff 0%, #a78bfa 100%);
-    color: #05060f;
+    background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
+    color: #ffffff;
     font-weight: 700;
-    box-shadow: 0 0 24px -3px rgba(79, 209, 255, 0.5);
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
     transition: all 0.3s ease;
   }
 
   .btn-hud-primary:hover {
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .dark .btn-hud-primary {
+    background: linear-gradient(135deg, #4fd1ff 0%, #a78bfa 100%);
+    color: #05060f;
+    box-shadow: 0 0 24px -3px rgba(79, 209, 255, 0.5);
+  }
+
+  .dark .btn-hud-primary:hover {
     box-shadow: 0 0 35px 2px rgba(167, 139, 250, 0.65);
     transform: translateY(-2px);
   }

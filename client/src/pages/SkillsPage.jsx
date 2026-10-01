@@ -225,14 +225,14 @@ export const SkillsPage = () => {
 
           {/* Right: Active Skill Real-World Inspector & Project Connector */}
           <div className="lg:col-span-4 sticky top-24 space-y-6">
-            <div className="p-6 rounded-3xl hud-card border border-accent-cyan/40 bg-[#05060f]/95 shadow-2xl space-y-5">
-              <div className="flex items-center justify-between pb-3 border-b border-white/10">
+            <div className="p-6 rounded-3xl hud-card border border-accent-cyan/40 dark:bg-[#05060f]/95 bg-white/95 shadow-2xl space-y-5">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/10">
                 <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-accent-cyan">
                   <Sparkles size={14} />
                   <span>Project Link Inspector</span>
                 </span>
                 {activeSkill && (
-                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
                     Active
                   </span>
                 )}
@@ -256,10 +256,10 @@ export const SkillsPage = () => {
                       );
                     })()}
                     <div>
-                      <h4 className="text-lg font-bold font-heading text-white">
+                      <h4 className="text-lg font-bold font-heading text-slate-900 dark:text-white">
                         {activeSkill.name}
                       </h4>
-                      <div className="text-xs font-mono text-accent-cyan">
+                      <div className="text-xs font-mono text-accent-cyan font-semibold">
                         Assessed Proficiency: {activeSkill.level}%
                       </div>
                     </div>
@@ -267,7 +267,7 @@ export const SkillsPage = () => {
 
                   {/* Connected Projects */}
                   <div>
-                    <div className="text-xs font-mono text-slate-400 mb-2.5">
+                    <div className="text-xs font-mono text-slate-600 dark:text-slate-400 mb-2.5">
                       Production &amp; Hackathon Implementations:
                     </div>
 
@@ -277,20 +277,20 @@ export const SkillsPage = () => {
                           <Link
                             key={p.id}
                             to={`/projects/${p.id}`}
-                            className="p-3 rounded-xl bg-[#0f1120] border border-white/10 hover:border-accent-cyan block transition-colors group"
+                            className="p-3 rounded-xl dark:bg-[#0f1120] bg-slate-50 border border-slate-200 dark:border-white/10 hover:border-accent-cyan block transition-colors group"
                           >
-                            <div className="flex items-center justify-between text-xs font-bold text-slate-200 group-hover:text-accent-cyan">
+                            <div className="flex items-center justify-between text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-accent-cyan">
                               <span>{p.title.split('—')[0].trim()}</span>
                               <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                             </div>
-                            <p className="text-[11px] text-slate-400 mt-1 line-clamp-2 leading-relaxed">
+                            <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
                               {p.description}
                             </p>
                           </Link>
                         ))}
                       </div>
                     ) : (
-                      <div className="p-4 rounded-xl bg-[#0f1120] border border-white/5 text-xs text-slate-400 leading-relaxed">
+                      <div className="p-4 rounded-xl dark:bg-[#0f1120] bg-slate-50 border border-slate-200 dark:border-white/5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                         Core academic coursework and technical certifications in progress.
                       </div>
                     )}
@@ -307,10 +307,10 @@ export const SkillsPage = () => {
                 </div>
               ) : (
                 <div className="text-center py-8 space-y-3">
-                  <div className="w-12 h-12 rounded-2xl bg-white/5 text-slate-400 flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 flex items-center justify-center mx-auto">
                     <Info size={24} />
                   </div>
-                  <div className="text-xs font-mono text-slate-400 max-w-xs mx-auto leading-relaxed">
+                  <div className="text-xs font-mono text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                     Hover or click any skill card on the left to reveal which real-world projects and case studies utilize it.
                   </div>
                 </div>

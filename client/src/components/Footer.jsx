@@ -28,7 +28,7 @@ export const Footer = ({ onOpenShortcuts, onOpenTerminal }) => {
           <div className="md:col-span-6 space-y-3">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-brand-blue via-brand-violet to-brand-cyan p-[1px]">
-                <div className="w-full h-full bg-[#0f1120] rounded-[11px] flex items-center justify-center text-accent-cyan">
+                <div className="w-full h-full bg-white dark:bg-[#0f1120] rounded-[11px] flex items-center justify-center text-accent-cyan">
                   <Terminal size={16} className="text-accent-cyan" />
                 </div>
               </div>

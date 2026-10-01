@@ -52,7 +52,7 @@ export const KeyboardShortcutsModal = ({ isOpen, onClose }) => {
             </div>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:text-[#a6adc8] dark:hover:text-white hover:bg-white/10 transition-colors"
+              className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:text-[#a6adc8] dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10 transition-colors"
             >
               <X size={18} />
             </button>

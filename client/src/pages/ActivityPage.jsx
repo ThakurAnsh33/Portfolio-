@@ -71,7 +71,7 @@ export const ActivityPage = () => {
         {/* Action / Refresh Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-3xl hud-card border border-slate-200 dark:border-white/10">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-[#0f1120] border border-white/15 flex items-center justify-center text-accent-cyan shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-[#0f1120] border border-slate-200 dark:border-white/15 flex items-center justify-center text-accent-cyan shrink-0">
               <Github size={24} />
             </div>
             <div>

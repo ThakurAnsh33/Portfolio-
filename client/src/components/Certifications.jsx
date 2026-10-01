@@ -103,7 +103,7 @@ export const Certifications = () => {
                 <span
                   className={`text-[10px] px-1.5 py-0.2 rounded-full ${
                     isSelected
-                      ? 'bg-white/20 text-white'
+                      ? 'bg-black/15 dark:bg-black/25 text-inherit font-bold'
                       : 'bg-slate-200/70 dark:bg-white/10 text-slate-700 dark:text-[#f2f3f8]'
                   }`}
                 >

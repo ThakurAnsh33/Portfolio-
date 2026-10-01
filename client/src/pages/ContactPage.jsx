@@ -220,7 +220,7 @@ export const ContactPage = () => {
 
           {/* Right Column: Contact Message Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-10 rounded-3xl hud-card border border-accent-cyan/30 bg-[#05060f]/95 shadow-2xl relative overflow-hidden">
+            <div className="p-6 sm:p-10 rounded-3xl hud-card border border-accent-cyan/30 dark:bg-[#05060f]/95 bg-white/95 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent-cyan/5 rounded-full blur-3xl pointer-events-none" />
 
               <div className="relative z-10 space-y-6">

@@ -70,7 +70,7 @@ export const ProjectsPage = () => {
             <div className="flex items-center gap-2">
               <Filter size={15} />
               <span>
-                Filtering by skill: <strong className="text-white">"{techQuery}"</strong> ({filteredProjects.length} match{filteredProjects.length !== 1 ? 'es' : ''})
+                Filtering by skill: <strong className="text-slate-900 dark:text-white font-bold">"{techQuery}"</strong> ({filteredProjects.length} match{filteredProjects.length !== 1 ? 'es' : ''})
               </span>
             </div>
             <button

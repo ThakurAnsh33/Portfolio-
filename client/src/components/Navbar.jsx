@@ -43,7 +43,7 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
           className="group flex items-center gap-3"
         >
           <div className="w-10 h-10 rounded-xl p-[1.5px] hud-gradient-accent shadow-hud-glow flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <div className="w-full h-full bg-[#05060f] rounded-[10px] flex items-center justify-center text-accent-cyan font-heading font-extrabold text-base">
+            <div className="w-full h-full bg-white dark:bg-[#05060f] rounded-[10px] flex items-center justify-center text-accent-cyan font-heading font-extrabold text-base">
               AS
             </div>
           </div>
@@ -171,18 +171,17 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
           </a>
         </div>
 
-        {/* Mobile Header Controls */}
+        {/* Mobile Menu & Theme Toggle */}
         <div className="flex sm:hidden items-center gap-2">
-          {onOpenTerminal && (
-            <button
-              onClick={onOpenTerminal}
-              aria-label="Open Terminal"
-              className="p-2 rounded-lg hud-card text-accent-cyan"
-              title="Open Terminal"
-            >
-              <Terminal size={17} />
-            </button>
-          )}
+          <a
+            href={personalInfo.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            className="p-2 rounded-lg hud-card text-accent-cyan"
+          >
+            <Linkedin size={17} />
+          </a>
 
           <button
             onClick={toggleTheme}
@@ -234,11 +233,6 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
               })}
 
               <div className="pt-3 border-t border-slate-200 dark:border-white/10 flex flex-col gap-2.5">
-                <div className="flex items-center justify-between gap-2 py-1">
-                  <span className="text-xs text-slate-500 dark:text-content-muted">UI Audio Effects:</span>
-                  <SoundToggle />
-                </div>
-
                 {onOpenTerminal && (
                   <button
                     onClick={() => {

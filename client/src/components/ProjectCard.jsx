@@ -141,18 +141,18 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden mb-4"
               >
-                <div className="rounded-2xl border border-accent-cyan/30 bg-[#05060f] p-4 text-xs font-mono text-slate-300">
-                  <div className="flex items-center justify-between pb-2 mb-2 border-b border-white/10 text-slate-400">
-                    <span className="flex items-center gap-1.5 text-accent-cyan">
+                <div className="rounded-2xl border border-accent-cyan/30 dark:bg-[#05060f] bg-slate-100/90 p-4 text-xs font-mono text-slate-700 dark:text-slate-300">
+                  <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400">
+                    <span className="flex items-center gap-1.5 text-accent-cyan font-semibold">
                       <Laptop size={14} /> Interactive Preview Mockup
                     </span>
-                    <span className="text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Live Schema Ready
+                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Live Schema Ready
                     </span>
                   </div>
                   {isRealDeployedUrl ? (
                     <div className="space-y-2">
-                      <p className="text-[11px] text-slate-400">
+                      <p className="text-[11px] text-slate-600 dark:text-slate-400">
                         Active deployment detected. Click below to launch external web service.
                       </p>
                       <a
@@ -167,9 +167,9 @@ export const ProjectCard = ({ project, index, isHeroVariant = false }) => {
                     </div>
                   ) : (
                     <div className="space-y-2">
-                      <div className="p-3 rounded-xl bg-[#0f1120] border border-white/5 space-y-1.5">
+                      <div className="p-3 rounded-xl dark:bg-[#0f1120] bg-white border border-slate-200 dark:border-white/5 space-y-1.5">
                         <div className="text-accent-cyan font-bold text-xs">{project.title.split('—')[0]}</div>
-                        <p className="text-[11px] text-slate-400 leading-relaxed">
+                        <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">
                           Full-stack architecture with REST API endpoints, real-time events, and database persistence.
                         </p>
                       </div>

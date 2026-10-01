@@ -43,7 +43,7 @@ export const GitHubStatsCard = () => {
         {/* Card Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-slate-200 dark:border-white/10">
           <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-2xl bg-[#0f1120] border border-white/15 flex items-center justify-center text-accent-cyan shadow-sm">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-[#0f1120] border border-slate-200 dark:border-white/15 flex items-center justify-center text-accent-cyan shadow-sm">
               <Github size={24} />
             </div>
             <div>
