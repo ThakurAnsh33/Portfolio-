@@ -47,6 +47,9 @@ const sendEmailNotification = async ({ name, email, message }) => {
         user: emailUser,
         pass: cleanPass,
       },
+      connectionTimeout: 4000,
+      greetingTimeout: 4000,
+      socketTimeout: 4000,
     });
 
     const mailOptions = {
@@ -169,12 +172,21 @@ export const submitContactMessage = async (req, res) => {
       );
     }
 
-    // Trigger email notification and capture outcome
-    const emailResult = await sendEmailNotification({
-      name: name.trim(),
-      email: email.trim().toLowerCase(),
-      message: message.trim(),
-    });
+    // Trigger email notification with strict timeout so user response is never blocked or delayed
+    let emailResult = { sent: false, reason: 'Pending dispatch' };
+    try {
+      const emailPromise = sendEmailNotification({
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
+        message: message.trim(),
+      });
+      const timeoutPromise = new Promise((resolve) =>
+        setTimeout(() => resolve({ sent: false, reason: 'Email dispatch timed out on cloud network' }), 3500)
+      );
+      emailResult = await Promise.race([emailPromise, timeoutPromise]);
+    } catch (e) {
+      console.warn('[Contact Email Dispatch Error]:', e.message);
+    }
 
     // Always return 201 success so user experience on frontend is seamless
     return res.status(201).json({
