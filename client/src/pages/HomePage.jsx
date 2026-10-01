@@ -93,40 +93,40 @@ export const HomePage = () => {
 
             {/* Live Terminal & Interactive Capabilities Card */}
             <div className="lg:col-span-5 space-y-4">
-              <div className="p-6 rounded-3xl hud-card border border-accent-cyan/30 dark:bg-[#05060f]/90 bg-white/95 space-y-4 shadow-xl">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/10 text-xs font-mono text-slate-500 dark:text-slate-400">
+              <div className="p-6 rounded-3xl hud-card border border-accent-cyan/30 bg-[#05060f]/90 space-y-4 shadow-xl">
+                <div className="flex items-center justify-between pb-3 border-b border-white/10 text-xs font-mono text-slate-400">
                   <span className="flex items-center gap-2 text-accent-cyan font-bold">
                     <Terminal size={14} /> Developer Quick Bar
                   </span>
-                  <span className="text-emerald-500 dark:text-emerald-400 font-semibold">READY</span>
+                  <span className="text-emerald-400">READY</span>
                 </div>
 
-                <div className="space-y-2 text-xs font-mono text-slate-700 dark:text-slate-300">
+                <div className="space-y-2 text-xs font-mono text-slate-300">
                   <div className="text-slate-500"># Fast navigate using keyboard shortcuts:</div>
-                  <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-[#0f1120] border border-slate-200 dark:border-white/5 space-y-1.5">
+                  <div className="p-2.5 rounded-xl bg-[#0f1120] border border-white/5 space-y-1.5">
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Command Palette:</span>
+                      <span className="text-slate-400">Command Palette:</span>
                       <span className="px-2 py-0.5 rounded bg-accent-cyan/15 text-accent-cyan font-bold">Ctrl + K</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Shortcut Cheat Sheet:</span>
+                      <span className="text-slate-400">Shortcut Cheat Sheet:</span>
                       <span className="px-2 py-0.5 rounded bg-accent-cyan/15 text-accent-cyan font-bold">?</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Quick Jump Routes:</span>
+                      <span className="text-slate-400">Quick Jump Routes:</span>
                       <span className="px-2 py-0.5 rounded bg-accent-cyan/15 text-accent-cyan font-bold">G + [H/A/S/E/P/C]</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="pt-2">
-                  <div className="text-xs font-mono text-slate-600 dark:text-slate-400 mb-2">Core Tech Competencies:</div>
+                  <div className="text-xs font-mono text-slate-400 mb-2">Core Tech Competencies:</div>
                   <div className="flex flex-wrap gap-1.5">
                     {coreSkills.map((s) => (
                       <Link
                         key={s.name}
                         to={`/projects?tech=${encodeURIComponent(s.name.toLowerCase())}`}
-                        className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:text-accent-cyan hover:bg-accent-cyan/10 border border-slate-200 dark:border-white/10 transition-colors"
+                        className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300 hover:text-accent-cyan hover:bg-accent-cyan/10 border border-white/10 transition-colors"
                       >
                         {s.name}
                       </Link>
@@ -195,7 +195,7 @@ export const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-8 rounded-3xl hud-card border border-slate-200 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl dark:bg-[#0f1120] bg-slate-100 border border-slate-200 dark:border-white/15 flex items-center justify-center text-accent-cyan shrink-0">
+              <div className="w-14 h-14 rounded-2xl bg-[#0f1120] border border-white/15 flex items-center justify-center text-accent-cyan shrink-0">
                 <Activity size={28} />
               </div>
               <div>
