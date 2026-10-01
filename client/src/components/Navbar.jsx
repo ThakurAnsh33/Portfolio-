@@ -42,9 +42,16 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
           to="/"
           className="group flex items-center gap-3"
         >
-          <div className="w-10 h-10 rounded-xl p-[1.5px] hud-gradient-accent shadow-hud-glow flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <div className="w-full h-full bg-white dark:bg-[#05060f] rounded-[10px] flex items-center justify-center text-accent-cyan font-heading font-extrabold text-base">
-              AS
+          <div className="w-10 h-10 rounded-xl p-[1.5px] hud-gradient-accent shadow-hud-glow flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shrink-0">
+            <div className="w-full h-full bg-white dark:bg-[#05060f] rounded-[10px] flex items-center justify-center text-accent-cyan font-heading font-extrabold text-base overflow-hidden relative">
+              <img
+                src={personalInfo.profileImage || "/profile.png"}
+                alt={personalInfo.name}
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
             </div>
           </div>
           <div>

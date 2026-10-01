@@ -273,7 +273,7 @@ export const Hero = () => {
               <div className="hud-card p-6 sm:p-8 rounded-3xl border shadow-2xl relative overflow-hidden">
                 
                 {/* HUD Header Bar */}
-                <div className="flex items-center justify-between pb-5 mb-6 border-b border-slate-200 dark:border-white/10">
+                <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200 dark:border-white/10">
                   <div className="flex items-center gap-2">
                     <div className="w-2.5 h-2.5 rounded-full bg-accent-cyan animate-pulse" />
                     <span className="font-mono text-xs uppercase tracking-wider font-semibold text-accent-cyan">
@@ -283,6 +283,34 @@ export const Hero = () => {
                   <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-accent-violet/15 text-accent-violet border border-accent-violet/30">
                     MERN Stack
                   </span>
+                </div>
+
+                {/* Profile Identity Badge */}
+                <div className="flex items-center gap-3.5 mb-5 p-3 rounded-2xl bg-slate-100/70 dark:bg-[#14172a]/70 border border-slate-200/80 dark:border-white/5">
+                  <div className="relative shrink-0">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl p-[2px] bg-gradient-to-tr from-accent-cyan via-accent-violet to-emerald-400 shadow-hud-glow overflow-hidden">
+                      <img
+                        src={personalInfo.profileImage || "/profile.png"}
+                        alt={personalInfo.name}
+                        className="w-full h-full object-cover object-top rounded-[14px]"
+                      />
+                    </div>
+                    <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white dark:border-[#05060f] flex items-center justify-center" title="Available for Roles">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-base sm:text-lg font-bold font-heading text-[#0b0d1a] dark:text-[#f2f3f8] leading-tight truncate">
+                      {personalInfo.name}
+                    </div>
+                    <div className="text-xs text-accent-cyan font-mono font-medium truncate">
+                      Full-Stack MERN Developer
+                    </div>
+                    <div className="text-[11px] text-slate-500 dark:text-[#a6adc8] flex items-center gap-1 mt-0.5 truncate">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                      <span>LPU B.Tech CSE • Ready to Ship</span>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Core Metric Highlights */}

@@ -56,8 +56,46 @@ export const AboutPage = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-7 space-y-6">
-              <div className="hud-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-white/10 space-y-4">
-                <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+              <div className="hud-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-white/10 space-y-5">
+                {/* Profile Portrait Header */}
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 pb-5 border-b border-slate-200 dark:border-white/10">
+                  <div className="relative group shrink-0">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-[2px] bg-gradient-to-tr from-accent-cyan via-accent-violet to-emerald-400 shadow-hud-glow overflow-hidden">
+                      <img
+                        src={personalInfo.profileImage || "/profile.png"}
+                        alt={personalInfo.name}
+                        className="w-full h-full object-cover object-top rounded-[14px] transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <span className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500 text-[#05060f] shadow-md flex items-center gap-1 border border-white dark:border-[#05060f]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
+                      ACTIVE
+                    </span>
+                  </div>
+
+                  <div className="space-y-1.5 text-center sm:text-left min-w-0">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/25">
+                      <Sparkles size={11} />
+                      <span>Software Engineer &amp; Full Stack MERN</span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
+                      Ansh Singh
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-[#a6adc8]">
+                      Lovely Professional University • B.Tech CSE (CGPA 8.3)
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-1 text-xs text-slate-500 font-mono">
+                      <span className="flex items-center gap-1">
+                        <MapPin size={12} className="text-accent-violet" />
+                        <span>Punjab, India</span>
+                      </span>
+                      <span>•</span>
+                      <span className="text-emerald-500 font-semibold">Available for Roles</span>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-[#f2f3f8]">
                   Full-Stack MERN Engineer based in Punjab, India
                 </h3>
                 <p className="text-sm sm:text-base text-slate-700 dark:text-[#a6adc8] leading-relaxed">

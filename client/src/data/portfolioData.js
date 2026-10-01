@@ -17,6 +17,8 @@ export const personalInfo = {
   linkedIn: "https://www.linkedin.com/in/thakuransh/",
   github: "https://github.com/ThakurAnsh33",
   resumeUrl: "/resume.pdf",
+  profileImage: "/profile.png",
+  avatar: "/profile.png",
   cgpa: "8.3",
   university: "Lovely Professional University",
   status: "Available for Full-time Roles & Internships",

@@ -59,18 +59,29 @@ export const About = () => {
             className="lg:col-span-6 space-y-6"
           >
             <div className="hud-card p-8 rounded-3xl relative overflow-hidden border border-slate-200 dark:border-white/10">
-              <div className="flex items-center gap-3 text-accent-cyan mb-4">
-                <GraduationCap size={24} />
-                <span className="text-xs uppercase font-bold tracking-wider">Education & Background</span>
-              </div>
-
-              <h3 className="text-2xl font-bold font-heading text-[#0b0d1a] dark:text-[#f2f3f8] leading-snug">
-                Computer Science Undergrad at Lovely Professional University
-              </h3>
-
-              <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/30 text-xs font-semibold">
-                <span>Current CGPA:</span>
-                <span className="text-sm font-bold text-[#0b0d1a] dark:text-[#f2f3f8]">{personalInfo.cgpa} / 10.0</span>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-6 pb-6 border-b border-slate-200 dark:border-white/10">
+                <div className="relative shrink-0">
+                  <div className="w-20 h-20 rounded-2xl p-[2px] bg-gradient-to-tr from-accent-cyan via-accent-violet to-emerald-400 shadow-hud-glow overflow-hidden">
+                    <img
+                      src={personalInfo.profileImage || "/profile.png"}
+                      alt={personalInfo.name}
+                      className="w-full h-full object-cover object-top rounded-[14px]"
+                    />
+                  </div>
+                  <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white dark:border-[#05060f]" title="Available for Roles" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 text-accent-cyan mb-1">
+                    <GraduationCap size={18} />
+                    <span className="text-xs uppercase font-bold tracking-wider">Education &amp; Background</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-[#0b0d1a] dark:text-[#f2f3f8] leading-snug">
+                    Ansh Singh — Full Stack MERN
+                  </h3>
+                  <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/30 text-xs font-semibold">
+                    <span>LPU B.Tech CSE (CGPA {personalInfo.cgpa} / 10.0)</span>
+                  </div>
+                </div>
               </div>
 
               <div className="mt-6 space-y-4 text-slate-700 dark:text-[#e6e6f0] text-base leading-relaxed">
