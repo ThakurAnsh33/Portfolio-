@@ -81,8 +81,13 @@ export const Hero = () => {
     if (element) {
       const topOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - topOffset;
+      const offsetPosition = elementPosition + (window.scrollY || window.pageYOffset || 0) - topOffset;
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      if (window.history && window.history.pushState) {
+        window.history.pushState(null, '', `#${id}`);
+      }
+    } else {
+      window.location.href = `/${id}`;
     }
   };
 
