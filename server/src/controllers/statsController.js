@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 
 // Initial baseline count to represent existing placement/portfolio views
 const BASELINE_VISITS = 1240;
+let inMemoryVisits = BASELINE_VISITS;
 
 /**
  * @route   POST /api/visit
@@ -44,16 +45,18 @@ export const recordVisit = async (req, res) => {
       });
     }
 
-    // Fallback if DB is connecting
+    // Fallback if DB is disconnected: dynamically increment in-memory counter
+    inMemoryVisits++;
     return res.status(200).json({
       success: true,
-      count: BASELINE_VISITS + 1,
+      count: inMemoryVisits,
     });
   } catch (error) {
     console.error('[Visit Record Error]:', error.message);
+    inMemoryVisits++;
     return res.status(200).json({
       success: true,
-      count: BASELINE_VISITS,
+      count: inMemoryVisits,
     });
   }
 };
@@ -74,12 +77,12 @@ export const getVisitCount = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      count: BASELINE_VISITS,
+      count: inMemoryVisits,
     });
   } catch (error) {
     return res.status(200).json({
       success: true,
-      count: BASELINE_VISITS,
+      count: inMemoryVisits,
     });
   }
 };

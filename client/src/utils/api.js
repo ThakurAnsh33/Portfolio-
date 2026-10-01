@@ -91,6 +91,5 @@ export const getVisitCount = async () => {
  * Get tracked resume download URL
  */
 export const getResumeDownloadUrl = () => {
-  const baseUrl = getApiBaseUrl();
-  return `${baseUrl}/api/resume-download`;
+  return '/resume.pdf';
 };

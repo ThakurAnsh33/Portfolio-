@@ -171,17 +171,18 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
           </a>
         </div>
 
-        {/* Mobile Menu & Theme Toggle */}
+        {/* Mobile Header Controls */}
         <div className="flex sm:hidden items-center gap-2">
-          <a
-            href={personalInfo.linkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn Profile"
-            className="p-2 rounded-lg hud-card text-accent-cyan"
-          >
-            <Linkedin size={17} />
-          </a>
+          {onOpenTerminal && (
+            <button
+              onClick={onOpenTerminal}
+              aria-label="Open Terminal"
+              className="p-2 rounded-lg hud-card text-accent-cyan"
+              title="Open Terminal"
+            >
+              <Terminal size={17} />
+            </button>
+          )}
 
           <button
             onClick={toggleTheme}
@@ -233,6 +234,11 @@ export const Navbar = ({ onOpenTerminal, onOpenShortcuts }) => {
               })}
 
               <div className="pt-3 border-t border-slate-200 dark:border-white/10 flex flex-col gap-2.5">
+                <div className="flex items-center justify-between gap-2 py-1">
+                  <span className="text-xs text-slate-500 dark:text-content-muted">UI Audio Effects:</span>
+                  <SoundToggle />
+                </div>
+
                 {onOpenTerminal && (
                   <button
                     onClick={() => {
